@@ -15,3 +15,33 @@
 
 <body <?php body_class(); ?>>
 
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="<?php echo get_site_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo Casa">
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <h1 class="sans-serif uppercase small intro">
+                    independent art director<br>& digital designer
+                </h1>
+            </div>
+            <div class="col-sm-2">
+                <div class="container-checkbox select-theme">
+                    <p>
+                        <input type="checkbox" id="theme" />
+                        <label for="theme" class="sans-serif small">Dark mode</label>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-2 text-right">
+                <button class="navigation">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

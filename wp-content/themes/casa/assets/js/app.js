@@ -1,122 +1,182 @@
 $(document).ready(function(){
 
-    // Calendar
-    var paginateCount = 8;
-    var filterInit = "collectif";
-
-
-    initCalendar(filterInit, paginateCount);
-
-
-    $('.navigation-calendar a').click(function(event){
-        event.preventDefault();
-
-        if(!$(this).hasClass('active')){
-            $('.navigation-calendar a').removeClass('active');
-            $(this).addClass('active');
-            var filterInit = jQuery(this).attr('href');
-            $('.calendar-dates tbody tr').addClass('hidde');
-            $('.moreCalendar').removeClass('hidde');
-            initCalendar(filterInit, paginateCount);
-        }
-    });
-
-
-    $('.moreCalendar').click(function(event){
-        event.preventDefault();
-
-        filterInit = $('.navigation-calendar a.active').attr('href');
-        initCalendar(filterInit, paginateCount);
-
-    });
-
-    function initCalendar(filterInit, paginateCount){
-        var countInc = 0;
-
-        $('tbody tr.' + filterInit + '.hidde').each(function( ) {
-            var el = $(this);
-
-            if(paginateCount > countInc){
-                el.removeClass('hidde');
-            }
-
-            countInc++;
-
-        });
-
-        if($('tbody tr.' + filterInit + '.hidde').length == 0){
-            $('.moreCalendar').addClass('hidde')
-        }
-
+    const ui = {
+        btn: document.querySelector('.c-magnetic-btn'),
+        label: document.querySelector('.t-btn-label')
     }
 
+    const state = {
+        bounds: ui.btn.getBoundingClientRect(),
+        threshold: parseInt(ui.btn.dataset.threshold),
+        ratio: parseInt(ui.btn.dataset.ratio),
+        isMagnetic: false,
+        mouse: {
+            x: 0,
+            y: 0
+        },
+        ease: {
+            x: 0,
+            y: 0,
+            scale: 1,
+            value: ui.btn.dataset.ease
+        },
+        transform: {
+            x: 0,
+            y: 0,
+            scale: 1,
+            max: ui.btn.dataset.max
+        },
+        width: window.innerWidth,
+        height: window.innerHeight,
+        history: false,
+        scale: ui.btn.dataset.scale
+    }
 
-    // Checkbox recommandation
+    const mouseMove = ({ pageX, pageY }) => {
+        Object.assign(state, {
+            mouse: {
+                x: pageX,
+                y: pageY
+            },
+            isMagnetic: isMagnetic(pageX, pageY)
+        })
+    }
 
-    $('.domaine-checkbox input').change(function(){
-        var statusActif = $(this).prop('checked');
-        if(statusActif){
-            $(this).parent().find('label').addClass('active');
-        }else{
-            $(this).parent().find('label').removeClass('active');
+    const resize = () => {
+        Object.assign(state, {
+            bounds: ui.btn.getBoundingClientRect(),
+            width: window.innerWidth,
+            height: window.innerHeight
+        })
+    }
+
+    const isMagnetic = (x, y) => {
+        const { bounds } = state
+
+        const centerX = bounds.left + (bounds.width / 2)
+        const centerY = bounds.top + (bounds.height / 2)
+
+        // use pythagorean theorem to calculate
+        // cursor distance from center of btn
+        // a^2 + b^2 = c^2
+        const a = Math.abs(centerX - x)
+        const b = Math.abs(centerY - y)
+        const c = Math.sqrt(a * a + b * b)
+
+        // true if cursor distance from center of btn is
+        // equal to btn radius + threshold
+        const isHover = c < (bounds.width / 2) + state.threshold
+
+        if (!state.history && isHover) {
+            ui.btn.classList.add('is-hover')
+            Object.assign(state, {
+                threshold: state.threshold * state.ratio,
+                history: true
+            })
+        } else if (state.history && !isHover) {
+            ui.btn.classList.remove('is-hover')
+            Object.assign(state, {
+                threshold: state.threshold / state.ratio,
+                history: false
+            })
         }
+
+        return isHover
+    }
+
+    const run = () => {
+        requestAnimationFrame(run)
+
+        const { isMagnetic, transform, mouse, width, height, ease, max, scale } = state
+
+        transform.x = isMagnetic ? (mouse.x - width / 2) / width * transform.max : 0
+        transform.y = isMagnetic ? (mouse.y - height / 2) / height * transform.max : 0
+        transform.scale = isMagnetic ? scale : 1
+
+        // basic linear interpolation
+        // https://www.youtube.com/watch?v=yWhgniVHROw
+        ease.x += (transform.x - ease.x) * ease.value
+        ease.y += (transform.y - ease.y) * ease.value
+        ease.scale += (transform.scale - ease.scale) * ease.value
+
+        Object.assign(ui.btn.style, {
+            transform: `
+			translate(
+				${ease.x.toFixed(2)}px,
+				${ease.y.toFixed(2)}px
+			)
+			translateZ(0)
+			scale(
+				${(ease.scale).toFixed(2)}
+			)`
+        })
+
+        Object.assign(ui.label.style, {
+            transform: `
+			translate(
+				${(-ease.x  / state.ratio).toFixed(2)}px,
+				${(-ease.y  / state.ratio).toFixed(2)}px
+			)
+			translateZ(0)
+			scale(
+				${(1 / ease.scale).toFixed(2)}
+			)`
+        })
+    }
+
+    const init = () => {
+        document.addEventListener('mousemove', mouseMove)
+        window.addEventListener('resize', resize)
+        run()
+    }
+
+    init();
+
+
+
+
+    $(".image-follow").mousemove(function(event){
+        var el = $(this);
+        var relX = event.pageX - $(this).offset().left + 30;
+        var relY = event.pageY - $(this).offset().top;
+
+        el.find('.follow-image').fadeIn(100);
+        el.find('.follow-image').css({left: relX, top: relY})
     });
 
-    $('#send-recommandation').submit(function(){
-        if($('#status-recommendation').val() == 0){
-            event.preventDefault();
-            $('#status-recommendation').parent().addClass('require');
-        }
+
+    $(".button-round").mousemove(function(event){
+        var el = $(this);
+        var relX = event.pageX - $(this).offset().left;
+        var relY = event.pageY - $(this).offset().top;
+
+        el.find('.round').css("transform","translate3D(" + relX / 8 + "px," + relY / 8 + "px, 0)");
     });
 
-    $('#status-recommendation').change(function(){
-        var element = jQuery(this);
+    $(".button-round").mouseenter(function(event){
+        var el = $(this);
+        setTimeout(function(){
+            el.find('.round').addClass('is-hover');
+        }, 100);
 
-        if(element.val() > 2 || element.val() == 0 ){
-            $('.recommendation-domaine-list').css('display','none');
-        }else{
-            $('.recommendation-domaine-list').css('display','block');
-        }
+        $('#follower').fadeOut();
     });
 
+    $(".button-round").mouseleave(function(event){
+        var el = $(this);
+        var relX = 0;
+        var relY = 0;
 
+        setTimeout(function() {
+            el.find('.round').css("transform","translate3D(0, 0, 0)");
+        }, 100);
+        $('#follower').fadeIn();
 
-    // Fake Select
-    $('.fake-select .placeholder').click(function(){
-        $('.fake-select-content').slideUp();
-        if($(this).parent().find('.fake-select-content').hasClass('is-open')){
-            $(this).parent().find('.fake-select-content').slideUp();
-            $(this).parent().find('.fake-select-content').removeClass('is-open');
-        }else{
-            $('.fake-select-content').removeClass('is-open');
-            $(this).parent().find('.fake-select-content').slideDown();
-            $(this).parent().find('.fake-select-content').addClass('is-open');
-        }
+        el.find('.round').removeClass('is-hover');
     });
-
-
-    $(document).mouseup(function(e)
-    {
-        var container = $(".fake-select");
-
-        // if the target of the click isn't the container nor a descendant of the container
-        if (!container.is(e.target) && container.has(e.target).length === 0)
-        {
-            $('.fake-select-content').slideUp();
-            $('.fake-select-content').removeClass('is-open');
-        }
-    });
-
 });
 
-window.onload = function() {
-    $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        arrows: false,
-    });
-};
+
+
+//# sourceURL=coffeescript
+
