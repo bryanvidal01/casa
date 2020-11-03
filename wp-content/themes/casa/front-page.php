@@ -18,6 +18,7 @@ get_header();
 </section>
 
 
+
 <section class="section-video-full">
     <video src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" autoplay muted loop></video>
     <div class="container-fluid">

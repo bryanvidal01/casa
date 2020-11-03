@@ -12568,115 +12568,99 @@ body {
   font-size: 18px;
 }
 
-/* line 24, ../sass/style.scss */
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  white-space: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
-}
-
-/* line 44, ../sass/style.scss */
-.u-fit {
-  width: 100%;
-  height: 100%;
-}
-
-/* line 49, ../sass/style.scss */
-.u-relative {
-  position: relative;
-}
-
-/* line 53, ../sass/style.scss */
-.u-absolute {
-  position: absolute;
-}
-/* line 56, ../sass/style.scss */
-.u-absolute.u-pos-tl {
-  top: 0;
-  left: 0;
-}
-
-/* line 62, ../sass/style.scss */
-.u-flex {
+/* line 21, ../sass/style.scss */
+#burger-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 50vh 50vw;
+  float: right;
   display: flex;
-}
-/* line 65, ../sass/style.scss */
-.u-flex.u-center-xy {
+  position: relative;
   justify-content: center;
   align-items: center;
+  border: 1px dotted #333;
 }
 
-/* line 71, ../sass/style.scss */
-.c-magnetic-btn {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+/* line 33, ../sass/style.scss */
+#burger-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 32px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  z-index: 4;
 }
 
-/* line 77, ../sass/style.scss */
-.o-circle {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.015);
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.2;
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: opacity;
+/* line 48, ../sass/style.scss */
+#burger-circle.white {
+  border: 2px solid white;
+}
+
+/* line 52, ../sass/style.scss */
+#menu-burger {
+  width: 14px;
+  height: 22px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  pointer-events: initial;
+}
+
+/* line 61, ../sass/style.scss */
+.menu-overlay #menu-burger {
+  display: block;
+}
+
+/* line 65, ../sass/style.scss */
+#menu-burger span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #000;
+  opacity: 1;
+  right: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+/* line 84, ../sass/style.scss */
+.light-content #menu-burger span {
+  background: #fff;
 }
 
 /* line 88, ../sass/style.scss */
-.t-btn-label {
-  display: inline-block;
-  user-select: none;
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 13px;
+#menu-burger.white span {
+  background: #fff;
+}
+
+/* line 92, ../sass/style.scss */
+#menu-burger span:nth-child(1) {
+  top: 8px;
+}
+
+/* line 96, ../sass/style.scss */
+#menu-burger span:nth-child(2) {
+  top: 14px;
 }
 
 /* line 100, ../sass/style.scss */
-.is-hover .o-circle {
-  opacity: 0.4;
-}
-
-/* ============= */
-/* for demo only */
-/* ============= */
-/* line 112, ../sass/style.scss */
-a {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 8px 16px;
-  transform-origin: bottom right;
-  transform: rotate(-90deg) translateX(100%);
-  font-family: 'Karla', sans-serif;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.5;
-  transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-/* line 128, ../sass/style.scss */
-a:hover {
-  opacity: 1;
+#menu-burger.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 10px;
 }
