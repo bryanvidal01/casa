@@ -1,0 +1,16 @@
+footer{
+  padding: 45px;
+  .nav-footer{
+    a{
+      color: $black;
+    }
+  }
+
+  p{
+    margin-bottom: 0;
+  }
+
+  .align-bottom-absolute{
+    bottom: 12px;
+  }
+}

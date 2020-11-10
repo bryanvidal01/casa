@@ -76,9 +76,11 @@ $(window).ready(function () {
             ease: Power2.easeOut
         });
     }
+
 })
 
 
 
-//# sourceURL=coffeescript
+
+
 

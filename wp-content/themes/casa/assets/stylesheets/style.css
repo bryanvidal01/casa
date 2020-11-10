@@ -12170,6 +12170,7 @@ a.text-dark:focus, a.text-dark:hover {
 /* line 1, ../sass/_commons.scss */
 .serif {
   font-family: "larkenthin";
+  font-size: 18px;
 }
 /* line 4, ../sass/_commons.scss */
 .serif.italic {
@@ -12195,53 +12196,58 @@ a.text-dark:focus, a.text-dark:hover {
   font-size: 12.7vw;
   line-height: 11.5vw;
 }
+/* line 32, ../sass/_commons.scss */
+.title.medium {
+  font-size: 6.7vw;
+  line-height: 6.5vw;
+}
 
-/* line 34, ../sass/_commons.scss */
+/* line 39, ../sass/_commons.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 38, ../sass/_commons.scss */
+/* line 43, ../sass/_commons.scss */
 .small {
   font-size: 14px;
 }
 
-/* line 42, ../sass/_commons.scss */
+/* line 47, ../sass/_commons.scss */
 .has-border {
   border-bottom: 10px solid #000;
   display: inline-block;
 }
 
-/* line 52, ../sass/_commons.scss */
+/* line 57, ../sass/_commons.scss */
 .color-beige {
   color: #f9f5e9;
 }
 
-/* line 56, ../sass/_commons.scss */
+/* line 61, ../sass/_commons.scss */
 .background-beige {
   background: #f9f5e9;
 }
 
-/* line 64, ../sass/_commons.scss */
+/* line 69, ../sass/_commons.scss */
 .container-checkbox {
   position: relative;
 }
 
-/* line 67, ../sass/_commons.scss */
+/* line 72, ../sass/_commons.scss */
 [type="checkbox"] {
   position: absolute;
   left: 0;
   opacity: 0.01;
 }
 
-/* line 73, ../sass/_commons.scss */
+/* line 78, ../sass/_commons.scss */
 [type="checkbox"] + label {
   position: relative;
   padding-left: 27px;
   cursor: pointer;
 }
 
-/* line 79, ../sass/_commons.scss */
+/* line 84, ../sass/_commons.scss */
 [type="checkbox"]:not(:checked) + label::before,
 [type="checkbox"]:checked + label::before {
   content: '';
@@ -12257,7 +12263,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 /* Aspect de la coche */
-/* line 94, ../sass/_commons.scss */
+/* line 99, ../sass/_commons.scss */
 [type="checkbox"]:not(:checked) + label::after,
 [type="checkbox"]:checked + label::after {
   content: '';
@@ -12274,10 +12280,27 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* Aspect non cochée */
 /* Aspect cochée */
-/* line 115, ../sass/_commons.scss */
+/* line 120, ../sass/_commons.scss */
 [type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: translate3D(6px, 0, 0);
+}
+
+/* line 126, ../sass/_commons.scss */
+.image-shadow {
+  box-shadow: 0 20px 40px black;
+  max-width: 100%;
+}
+
+/* line 132, ../sass/_commons.scss */
+.no-margin {
+  margin-bottom: 0;
+}
+
+/* line 137, ../sass/_commons.scss */
+.align-bottom-absolute {
+  position: absolute;
+  bottom: 0;
 }
 
 /* line 1, ../sass/_components.scss */
@@ -12290,12 +12313,26 @@ a.text-dark:focus, a.text-dark:hover {
   display: none;
   position: absolute;
 }
-/* line 10, ../sass/_components.scss */
+/* line 8, ../sass/_components.scss */
+.image-follow .follow-image img {
+  position: absolute;
+}
+/* line 11, ../sass/_components.scss */
+.image-follow .follow-image img:nth-child(2) {
+  transform: translate(20px, 20px);
+  z-index: 2;
+}
+/* line 15, ../sass/_components.scss */
+.image-follow .follow-image img:nth-child(3) {
+  transform: translate(40px, 40px);
+  z-index: 2;
+}
+/* line 26, ../sass/_components.scss */
 .image-follow:hover .follow-image {
   display: block;
 }
 
-/* line 17, ../sass/_components.scss */
+/* line 33, ../sass/_components.scss */
 .button-round {
   width: 180px;
   height: 180px;
@@ -12304,15 +12341,15 @@ a.text-dark:focus, a.text-dark:hover {
   display: inline-block;
   background: transparent;
 }
-/* line 25, ../sass/_components.scss */
+/* line 41, ../sass/_components.scss */
 .button-round.white {
   color: #FFF;
 }
-/* line 27, ../sass/_components.scss */
+/* line 43, ../sass/_components.scss */
 .button-round.white .round {
   border-color: #FFF;
 }
-/* line 32, ../sass/_components.scss */
+/* line 48, ../sass/_components.scss */
 .button-round .round {
   position: absolute;
   width: 100%;
@@ -12324,12 +12361,12 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   transition: .2s;
 }
-/* line 43, ../sass/_components.scss */
+/* line 59, ../sass/_components.scss */
 .button-round .round.is-hover {
   transition: 0s;
 }
 
-/* line 50, ../sass/_components.scss */
+/* line 66, ../sass/_components.scss */
 button.navigation {
   width: 70px;
   height: 70px;
@@ -12340,7 +12377,7 @@ button.navigation {
   display: inline-block;
   margin-top: -4px;
 }
-/* line 60, ../sass/_components.scss */
+/* line 76, ../sass/_components.scss */
 button.navigation:before {
   content: 'Menu';
   font-family: "oakes_groteskregular";
@@ -12350,7 +12387,7 @@ button.navigation:before {
   transform: translateY(-50%);
   right: calc(100% + 20px);
 }
-/* line 70, ../sass/_components.scss */
+/* line 86, ../sass/_components.scss */
 button.navigation .bar {
   width: 11px;
   height: 1px;
@@ -12360,7 +12397,7 @@ button.navigation .bar {
   left: 50%;
   transform: translateX(-50%);
 }
-/* line 79, ../sass/_components.scss */
+/* line 95, ../sass/_components.scss */
 button.navigation .bar:last-child {
   top: auto;
   bottom: 31px;
@@ -12481,7 +12518,7 @@ section.intro-page .img-3 {
 }
 /* line 36, ../sass/_video-full.scss */
 .section-video-full .button-round {
-  margin: 90px 0;
+  margin: 9vw 0;
 }
 /* line 40, ../sass/_video-full.scss */
 .section-video-full .author-letter {
@@ -12560,107 +12597,106 @@ section.skills .container-text {
   margin-top: 50px;
 }
 
-/* line 13, ../sass/style.scss */
+/* line 1, ../sass/_latest-work.scss */
+.latest-work {
+  padding: 60px 45px;
+}
+/* line 4, ../sass/_latest-work.scss */
+.latest-work .nav-date li {
+  display: inline-block;
+  margin: 0 7px;
+  position: relative;
+}
+/* line 10, ../sass/_latest-work.scss */
+.latest-work .nav-date li.is-active:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+/* line 20, ../sass/_latest-work.scss */
+.latest-work .nav-date li a {
+  color: #000;
+}
+
+/* line 28, ../sass/_latest-work.scss */
+.push-project {
+  padding: 100px;
+  background-size: cover;
+  position: relative;
+  margin-top: 40px;
+}
+/* line 34, ../sass/_latest-work.scss */
+.push-project:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 23, 23, 0.3);
+}
+/* line 44, ../sass/_latest-work.scss */
+.push-project .image-shadow {
+  margin-top: 60px;
+}
+/* line 48, ../sass/_latest-work.scss */
+.push-project .content-project {
+  margin-top: 170px;
+  padding-left: 40px;
+}
+/* line 53, ../sass/_latest-work.scss */
+.push-project .info-project {
+  color: #FFF;
+  margin-top: 65px;
+}
+/* line 57, ../sass/_latest-work.scss */
+.push-project .info-project .date {
+  width: 90px;
+  display: inline-block;
+}
+/* line 62, ../sass/_latest-work.scss */
+.push-project .info-project .description {
+  margin-top: 15px;
+  max-width: 395px;
+}
+
+/* line 69, ../sass/_latest-work.scss */
+.more-studies {
+  margin-top: 120px;
+  margin-bottom: 210px;
+}
+
+/* line 1, ../sass/_footer.scss */
+footer {
+  padding: 45px;
+}
+/* line 4, ../sass/_footer.scss */
+footer .nav-footer a {
+  color: #000;
+}
+/* line 9, ../sass/_footer.scss */
+footer p {
+  margin-bottom: 0;
+}
+/* line 13, ../sass/_footer.scss */
+footer .align-bottom-absolute {
+  bottom: 12px;
+}
+
+/* line 15, ../sass/style.scss */
 body {
   background: #f9f5e9;
   font-family: "oakes_groteskregular";
   -webkit-font-smoothing: antialiased;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
-/* line 21, ../sass/style.scss */
-#burger-wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 50vh 50vw;
-  float: right;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  border: 1px dotted #333;
-}
-
-/* line 33, ../sass/style.scss */
-#burger-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 32px;
-  box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -20px;
-  margin-left: -20px;
-  cursor: pointer;
-  z-index: 4;
-}
-
-/* line 48, ../sass/style.scss */
-#burger-circle.white {
-  border: 2px solid white;
-}
-
-/* line 52, ../sass/style.scss */
-#menu-burger {
-  width: 14px;
-  height: 22px;
-  position: relative;
-  margin: 0 auto;
-  z-index: 2;
-  pointer-events: initial;
-}
-
-/* line 61, ../sass/style.scss */
-.menu-overlay #menu-burger {
-  display: block;
-}
-
-/* line 65, ../sass/style.scss */
-#menu-burger span {
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background: #000;
-  opacity: 1;
-  right: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.2s ease-in-out;
-  -moz-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-
-/* line 84, ../sass/style.scss */
-.light-content #menu-burger span {
-  background: #fff;
-}
-
-/* line 88, ../sass/style.scss */
-#menu-burger.white span {
-  background: #fff;
-}
-
-/* line 92, ../sass/style.scss */
-#menu-burger span:nth-child(1) {
-  top: 8px;
-}
-
-/* line 96, ../sass/style.scss */
-#menu-burger span:nth-child(2) {
-  top: 14px;
-}
-
-/* line 100, ../sass/style.scss */
-#menu-burger.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 10px;
+/* line 23, ../sass/style.scss */
+a {
+  color: inherit;
 }

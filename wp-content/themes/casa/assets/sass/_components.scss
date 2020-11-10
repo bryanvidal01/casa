@@ -4,7 +4,23 @@
   .follow-image{
     display: none;
     position: absolute;
+
+    img{
+      position: absolute;
+
+      &:nth-child(2){
+        transform: translate(20px, 20px);
+        z-index: 2;
+      }
+      &:nth-child(3){
+        transform: translate(40px, 40px);
+        z-index: 2;
+
+      }
+    }
+
   }
+
 
   &:hover{
     .follow-image{
