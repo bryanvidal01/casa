@@ -57,8 +57,7 @@ get_header();
         <div class="row">
             <div class="col-sm-12">
                 <div class="author-letter">
-                    C<br/>
-                    &k
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/c-k.svg" alt="">
                 </div>
             </div>
         </div>
@@ -236,7 +235,6 @@ get_header();
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-sm-12 text-center">
                 <div class="more-studies">
@@ -253,8 +251,6 @@ get_header();
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>
 

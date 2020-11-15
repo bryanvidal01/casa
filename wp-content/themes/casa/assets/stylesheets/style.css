@@ -12199,7 +12199,7 @@ a.text-dark:focus, a.text-dark:hover {
 /* line 32, ../sass/_commons.scss */
 .title.medium {
   font-size: 6.7vw;
-  line-height: 6.5vw;
+  line-height: 6.9vw;
 }
 
 /* line 39, ../sass/_commons.scss */
@@ -12214,7 +12214,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* line 47, ../sass/_commons.scss */
 .has-border {
-  border-bottom: 10px solid #000;
+  border-bottom: 0.3vw solid #000;
   display: inline-block;
 }
 
@@ -12354,7 +12354,7 @@ a.text-dark:focus, a.text-dark:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  border: 2px solid #000;
   will-change: transform;
   border-radius: 50%;
   top: 0;
@@ -12401,6 +12401,116 @@ button.navigation .bar {
 button.navigation .bar:last-child {
   top: auto;
   bottom: 31px;
+}
+
+/* line 1, ../sass/_dark-theme.scss */
+.dark-theme {
+  background: #1c1c1c;
+  color: #f9f5e9;
+}
+/* line 8, ../sass/_dark-theme.scss */
+.dark-theme .header-logo svg g {
+  fill: #f9f5e9;
+}
+/* line 16, ../sass/_dark-theme.scss */
+.dark-theme [type="checkbox"]:not(:checked) + label::before, .dark-theme [type="checkbox"]:checked + label::before {
+  border: 1px solid #f9f5e9;
+}
+/* line 19, ../sass/_dark-theme.scss */
+.dark-theme [type="checkbox"]:not(:checked) + label::after, .dark-theme [type="checkbox"]:checked + label::after {
+  background: #f9f5e9;
+}
+/* line 24, ../sass/_dark-theme.scss */
+.dark-theme button.navigation {
+  border: solid 1.1px rgba(249, 245, 233, 0.2);
+}
+/* line 27, ../sass/_dark-theme.scss */
+.dark-theme button.navigation:before {
+  color: #f9f5e9;
+}
+/* line 30, ../sass/_dark-theme.scss */
+.dark-theme button.navigation .bar {
+  background: #f9f5e9;
+}
+/* line 35, ../sass/_dark-theme.scss */
+.dark-theme footer .nav-footer a {
+  color: #f9f5e9;
+}
+/* line 39, ../sass/_dark-theme.scss */
+.dark-theme .has-border {
+  border-color: #f9f5e9;
+}
+/* line 43, ../sass/_dark-theme.scss */
+.dark-theme .latest-work .nav-date li.is-active:before {
+  background: #f9f5e9;
+}
+/* line 46, ../sass/_dark-theme.scss */
+.dark-theme .latest-work .nav-date li a {
+  color: #f9f5e9;
+}
+/* line 50, ../sass/_dark-theme.scss */
+.dark-theme section.about-me:before,
+.dark-theme section.work-with-me:before {
+  background: #f9f5e9;
+}
+/* line 55, ../sass/_dark-theme.scss */
+.dark-theme section.one-more-thing .title-border {
+  border-color: #f9f5e9;
+}
+/* line 59, ../sass/_dark-theme.scss */
+.dark-theme svg circle {
+  stroke: #f9f5e9;
+}
+/* line 62, ../sass/_dark-theme.scss */
+.dark-theme svg path {
+  fill: #f9f5e9;
+}
+/* line 65, ../sass/_dark-theme.scss */
+.dark-theme svg text {
+  fill: #f9f5e9;
+}
+/* line 70, ../sass/_dark-theme.scss */
+.dark-theme .button-round {
+  color: #f9f5e9;
+}
+/* line 72, ../sass/_dark-theme.scss */
+.dark-theme .button-round .round {
+  border-color: #f9f5e9;
+}
+/* line 77, ../sass/_dark-theme.scss */
+.dark-theme .case-resume .container-info-resume:before {
+  background: #f9f5e9;
+}
+/* line 83, ../sass/_dark-theme.scss */
+.dark-theme .slick-dots li:hover button:before, .dark-theme .slick-dots li.slick-active button:before {
+  background: #FFF;
+}
+/* line 88, ../sass/_dark-theme.scss */
+.dark-theme .intro-page.case .has-border {
+  border-color: #f9f5e9;
+}
+
+/* line 97, ../sass/_dark-theme.scss */
+body {
+  transition: 0.3s background-color, color;
+}
+
+/* line 102, ../sass/_dark-theme.scss */
+.header-logo svg {
+  transition: 0.3s;
+}
+
+/* line 107, ../sass/_dark-theme.scss */
+button.navigation {
+  transition: 0.3s;
+}
+/* line 110, ../sass/_dark-theme.scss */
+button.navigation:before {
+  transition: 0.3s;
+}
+/* line 113, ../sass/_dark-theme.scss */
+button.navigation .bar {
+  transition: 0.3s;
 }
 
 /* line 1, ../sass/_header.scss */
@@ -12477,6 +12587,11 @@ section.intro-page .img-3 {
   left: 50%;
   display: block;
   width: 7vw;
+}
+/* line 56, ../sass/_intro.scss */
+section.intro-page .title {
+  z-index: 3;
+  position: relative;
 }
 
 /* line 1, ../sass/_video-full.scss */
@@ -12686,8 +12801,773 @@ footer p {
 footer .align-bottom-absolute {
   bottom: 12px;
 }
+/* line 16, ../sass/_footer.scss */
+footer .align-bottom-absolute a {
+  text-decoration: underline;
+}
+/* line 21, ../sass/_footer.scss */
+footer .container-year {
+  position: relative;
+  display: inline-block;
+}
+/* line 24, ../sass/_footer.scss */
+footer .container-year .logo-year {
+  right: calc(100% - 3vw);
+  position: absolute;
+  top: -2vw;
+}
+/* line 29, ../sass/_footer.scss */
+footer .container-year .logo-year svg {
+  height: 12vw;
+  width: 12vw;
+  -webkit-animation: rotating 8s linear infinite;
+  -moz-animation: rotating 8s linear infinite;
+  -ms-animation: rotating 8s linear infinite;
+  -o-animation: rotating 8s linear infinite;
+  animation: rotating 8s linear infinite;
+}
+/* line 41, ../sass/_footer.scss */
+footer.single {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #f9f5e9;
+  margin-top: 130px;
+  padding-top: 200px;
+}
+/* line 48, ../sass/_footer.scss */
+footer.single:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.5) 83%, rgba(0, 0, 0, 0.5));
+}
+/* line 59, ../sass/_footer.scss */
+footer.single .nav-footer a {
+  color: #FFF;
+}
+/* line 63, ../sass/_footer.scss */
+footer.single .paginate {
+  padding-bottom: 140px;
+  border-bottom: 2px solid #f9f5e9;
+  margin-bottom: 100px;
+}
+/* line 70, ../sass/_footer.scss */
+footer.single svg circle {
+  stroke: #f9f5e9;
+}
+/* line 73, ../sass/_footer.scss */
+footer.single svg path {
+  fill: #f9f5e9;
+}
+/* line 76, ../sass/_footer.scss */
+footer.single svg text {
+  fill: #f9f5e9;
+}
 
-/* line 15, ../sass/style.scss */
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* line 2, ../sass/_page-about.scss */
+.intro-page:before, .intro-page:after {
+  display: none;
+}
+/* line 6, ../sass/_page-about.scss */
+.intro-page.about .title {
+  line-height: 12.7vw;
+}
+/* line 10, ../sass/_page-about.scss */
+.intro-page.about .img-2 {
+  width: 12vw;
+  top: 3vw;
+}
+/* line 15, ../sass/_page-about.scss */
+.intro-page.about .img-3 {
+  display: inline-block;
+  left: 0;
+  width: 13vw;
+}
+
+/* line 24, ../sass/_page-about.scss */
+section.about-me {
+  padding: 60px;
+  position: relative;
+}
+/* line 28, ../sass/_page-about.scss */
+section.about-me:before {
+  content: '';
+  width: calc(100% - 30px);
+  margin-left: 15px;
+  position: relative;
+  margin-bottom: 60px;
+  height: 2px;
+  background: #000;
+  display: block;
+}
+/* line 40, ../sass/_page-about.scss */
+section.about-me .info-about-me {
+  padding-top: 110px;
+}
+
+/* line 46, ../sass/_page-about.scss */
+section.work-with-me {
+  padding: 60px;
+  position: relative;
+}
+/* line 50, ../sass/_page-about.scss */
+section.work-with-me:before {
+  content: '';
+  width: calc(100% - 30px);
+  margin-left: 15px;
+  position: relative;
+  margin-bottom: 60px;
+  height: 2px;
+  background: #000;
+  display: block;
+}
+/* line 62, ../sass/_page-about.scss */
+section.work-with-me .info-about-me {
+  padding-top: 70px;
+}
+/* line 66, ../sass/_page-about.scss */
+section.work-with-me .logo-work-with-me {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* line 73, ../sass/_page-about.scss */
+section.one-more-thing {
+  padding: 60px 60px 140px 60px;
+}
+/* line 76, ../sass/_page-about.scss */
+section.one-more-thing .title-border {
+  text-align: right;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4vw;
+  margin-bottom: 50px;
+}
+/* line 83, ../sass/_page-about.scss */
+section.one-more-thing .logo-ck-about {
+  margin-bottom: 100px;
+}
+/* line 85, ../sass/_page-about.scss */
+section.one-more-thing .logo-ck-about svg {
+  width: 12vw;
+  height: 12vw;
+}
+/* line 88, ../sass/_page-about.scss */
+section.one-more-thing .logo-ck-about svg g {
+  fill: #000 !important;
+}
+/* line 94, ../sass/_page-about.scss */
+section.one-more-thing .image-one-more-thing {
+  margin-top: 40px;
+  max-width: 100%;
+  margin-bottom: 90px;
+}
+/* line 100, ../sass/_page-about.scss */
+section.one-more-thing .small-medium {
+  font-size: 5vw;
+  line-height: 5.5vw;
+}
+
+/* line 2, ../sass/_page-case.scss */
+.intro-page.case {
+  position: relative;
+  padding-bottom: 190px;
+}
+/* line 6, ../sass/_page-case.scss */
+.intro-page.case .has-border {
+  padding-bottom: 3vw;
+  border-bottom: .1vw solid #000;
+}
+/* line 11, ../sass/_page-case.scss */
+.intro-page.case .image-case {
+  position: absolute;
+  right: 75px;
+  width: 30%;
+  top: 235px;
+  bottom: 0;
+}
+/* line 17, ../sass/_page-case.scss */
+.intro-page.case .image-case .container-image {
+  overflow: hidden;
+  position: relative;
+  height: calc(100% - 190px);
+}
+/* line 21, ../sass/_page-case.scss */
+.intro-page.case .image-case .container-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 29, ../sass/_page-case.scss */
+.intro-page.case .image-case .button-round {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  z-index: 3;
+}
+/* line 37, ../sass/_page-case.scss */
+.intro-page.case .list-info-case {
+  padding-top: 3vw;
+}
+/* line 40, ../sass/_page-case.scss */
+.intro-page.case .list-info-case .label {
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+/* line 45, ../sass/_page-case.scss */
+.intro-page.case .list-info-case h3 {
+  font-size: 18px;
+}
+
+/* line 53, ../sass/_page-case.scss */
+.intro-case-text {
+  padding: 0 60px;
+  margin-top: -40px;
+  margin-bottom: 140px;
+}
+
+/* line 60, ../sass/_page-case.scss */
+.case-image-full {
+  margin-bottom: 140px;
+}
+/* line 62, ../sass/_page-case.scss */
+.case-image-full img {
+  width: 100%;
+}
+
+/* line 67, ../sass/_page-case.scss */
+.case-title-text {
+  padding: 0 60px;
+  margin-bottom: 140px;
+}
+/* line 71, ../sass/_page-case.scss */
+.case-title-text .title-strate {
+  font-family: "larkenthin";
+}
+/* line 74, ../sass/_page-case.scss */
+.case-title-text .title-strate i {
+  font-family: "larkenthin_italic";
+}
+/* line 77, ../sass/_page-case.scss */
+.case-title-text .title-strate strong {
+  font-family: "oakes_grotesklight";
+}
+/* line 82, ../sass/_page-case.scss */
+.case-title-text .text-content {
+  margin-top: 100px;
+  max-width: 60%;
+}
+
+/* line 88, ../sass/_page-case.scss */
+.case-two-image {
+  padding: 0 60px;
+  margin-bottom: 140px;
+}
+/* line 92, ../sass/_page-case.scss */
+.case-two-image img {
+  max-width: 100%;
+}
+
+/* line 97, ../sass/_page-case.scss */
+.case-carrousel {
+  margin-bottom: 140px;
+}
+/* line 99, ../sass/_page-case.scss */
+.case-carrousel .slick-slide img {
+  max-width: 100%;
+  padding: 0 15px;
+}
+/* line 105, ../sass/_page-case.scss */
+.case-carrousel .slick-slide:focus {
+  outline: none;
+}
+/* line 109, ../sass/_page-case.scss */
+.case-carrousel .slick-dots {
+  width: 60%;
+  background: #dbd1b3;
+  height: 2px;
+  display: flex;
+  margin: 90px auto 0;
+  position: relative;
+}
+/* line 117, ../sass/_page-case.scss */
+.case-carrousel .slick-dots li {
+  display: inherit;
+  flex-grow: 1;
+  margin: 0;
+}
+/* line 122, ../sass/_page-case.scss */
+.case-carrousel .slick-dots li button {
+  width: 100%;
+  padding: 0;
+  height: 100%;
+}
+/* line 127, ../sass/_page-case.scss */
+.case-carrousel .slick-dots li button:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  opacity: 0;
+  transition: .3s;
+}
+/* line 137, ../sass/_page-case.scss */
+.case-carrousel .slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* line 145, ../sass/_page-case.scss */
+.case-title-text-category {
+  padding: 0 60px;
+  margin-bottom: 140px;
+}
+/* line 148, ../sass/_page-case.scss */
+.case-title-text-category .title-strate {
+  font-family: "larkenthin";
+}
+/* line 151, ../sass/_page-case.scss */
+.case-title-text-category .title-strate i {
+  font-family: "larkenthin_italic";
+}
+/* line 154, ../sass/_page-case.scss */
+.case-title-text-category .title-strate strong {
+  font-family: "oakes_grotesklight";
+}
+/* line 159, ../sass/_page-case.scss */
+.case-title-text-category .category {
+  margin-top: 60px;
+}
+/* line 163, ../sass/_page-case.scss */
+.case-title-text-category .text-content {
+  margin-top: 70px;
+}
+
+/* line 169, ../sass/_page-case.scss */
+.case-two-image-not-aligned {
+  position: relative;
+  padding: 0 60px;
+  margin-bottom: 140px;
+  padding-bottom: 10vw;
+}
+/* line 174, ../sass/_page-case.scss */
+.case-two-image-not-aligned .img-1 {
+  max-width: 100%;
+}
+/* line 178, ../sass/_page-case.scss */
+.case-two-image-not-aligned .img-2 {
+  max-width: 60%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: -10vw;
+  margin-left: 20%;
+}
+
+/* line 188, ../sass/_page-case.scss */
+.case-image-full-container {
+  padding: 0 60px;
+  margin-bottom: 140px;
+}
+/* line 191, ../sass/_page-case.scss */
+.case-image-full-container img {
+  width: 100%;
+}
+
+/* line 196, ../sass/_page-case.scss */
+.three-cols-images {
+  padding: 0 60px;
+  margin-bottom: 140px;
+}
+/* line 200, ../sass/_page-case.scss */
+.three-cols-images img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+/* line 206, ../sass/_page-case.scss */
+.three-cols-images .hide-space {
+  height: 14vw;
+}
+
+/* line 212, ../sass/_page-case.scss */
+.case-resume {
+  padding: 0 60px;
+}
+/* line 215, ../sass/_page-case.scss */
+.case-resume .resume-text {
+  margin-top: 30px;
+}
+/* line 219, ../sass/_page-case.scss */
+.case-resume .container-info-resume {
+  position: relative;
+  padding-top: 30px;
+}
+/* line 222, ../sass/_page-case.scss */
+.case-resume .container-info-resume:before {
+  content: '';
+  display: block;
+  width: calc(100% - 30px);
+  margin-left: 15px;
+  height: 2px;
+  background: #000;
+  margin-bottom: 60px;
+}
+/* line 232, ../sass/_page-case.scss */
+.case-resume .container-info-resume .button-round {
+  margin-top: -10px;
+}
+
+/* Slider */
+/* line 2, ../sass/_slider.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 21, ../sass/_slider.scss */
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, ../sass/_slider.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 35, ../sass/_slider.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 41, ../sass/_slider.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 51, ../sass/_slider.scss */
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 61, ../sass/_slider.scss */
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+/* line 68, ../sass/_slider.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 72, ../sass/_slider.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 77, ../sass/_slider.scss */
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+/* line 85, ../sass/_slider.scss */
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+/* line 89, ../sass/_slider.scss */
+.slick-slide img {
+  display: block;
+}
+
+/* line 93, ../sass/_slider.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 97, ../sass/_slider.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 101, ../sass/_slider.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 105, ../sass/_slider.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 109, ../sass/_slider.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 117, ../sass/_slider.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 123, ../sass/_slider.scss */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+}
+/* Arrows */
+/* line 139, ../sass/_slider.scss */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* line 164, ../sass/_slider.scss */
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+/* line 173, ../sass/_slider.scss */
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+/* line 180, ../sass/_slider.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+/* line 186, ../sass/_slider.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 200, ../sass/_slider.scss */
+.slick-prev {
+  left: -25px;
+}
+
+/* line 204, ../sass/_slider.scss */
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+/* line 209, ../sass/_slider.scss */
+.slick-prev:before {
+  content: '←';
+}
+
+/* line 213, ../sass/_slider.scss */
+[dir='rtl'] .slick-prev:before {
+  content: '→';
+}
+
+/* line 218, ../sass/_slider.scss */
+.slick-next {
+  right: -25px;
+}
+
+/* line 222, ../sass/_slider.scss */
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+/* line 227, ../sass/_slider.scss */
+.slick-next:before {
+  content: '→';
+}
+
+/* line 231, ../sass/_slider.scss */
+[dir='rtl'] .slick-next:before {
+  content: '←';
+}
+
+/* Dots */
+/* line 237, ../sass/_slider.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 242, ../sass/_slider.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 257, ../sass/_slider.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* line 270, ../sass/_slider.scss */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+/* line 288, ../sass/_slider.scss */
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+/* line 293, ../sass/_slider.scss */
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+/* line 298, ../sass/_slider.scss */
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 320, ../sass/_slider.scss */
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+/* line 19, ../sass/style.scss */
 body {
   background: #f9f5e9;
   font-family: "oakes_groteskregular";
@@ -12696,7 +13576,12 @@ body {
   overflow-x: hidden;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 a {
   color: inherit;
+}
+
+/* line 31, ../sass/style.scss */
+button:focus {
+  outline: none;
 }

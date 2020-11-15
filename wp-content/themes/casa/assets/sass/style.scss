@@ -4,6 +4,7 @@
 @import 'variables';
 @import 'commons';
 @import 'components';
+@import 'dark-theme';
 @import 'header';
 @import 'intro';
 @import 'video-full';
@@ -11,6 +12,9 @@
 @import 'skills';
 @import 'latest-work';
 @import 'footer';
+@import 'page-about';
+@import 'page-case';
+@import 'slider';
 
 body{
   background: $beige;
@@ -22,6 +26,10 @@ body{
 
 a{
   color: inherit;
+}
+
+button:focus{
+  outline: none;
 }
 
 

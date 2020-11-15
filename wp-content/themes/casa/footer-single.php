@@ -1,4 +1,33 @@
-<footer>
+<footer class="single" style="background-image: url('https://images.pexels.com/photos/919606/pexels-photo-919606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); ">
+    <div class="paginate">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <p class="small light label">
+                        Next case
+                    </p>
+                </div>
+                <div class="col-sm-8 text-right">
+                    <h3 class="title medium serif italic">
+                        Inspired
+                    </h3>
+                    <h3 class="title medium sans-serif light">
+                        in Iceland
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 text-center">
+                    <button class="button-round white">
+                        <div class="round"></div>
+                        <div class="text uppercase sans-serif light">
+                            View Case
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3">

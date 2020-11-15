@@ -10,6 +10,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/gsap.js"></script>
 
     <script  src='<?php echo get_template_directory_uri();?>/assets/js/jquery.js'></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.js"></script>
     <script  src='<?php echo get_template_directory_uri();?>/assets/js/app.js'></script>
     <?php wp_head(); ?>
 </head>
@@ -20,8 +21,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2">
-                <a href="<?php echo get_site_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo Casa">
+                <a href="<?php echo get_site_url(); ?>" class="header-logo">
+                    <?php lsd_get_template_part('icons','header', 'logo'); ?>
                 </a>
             </div>
             <div class="col-sm-6">

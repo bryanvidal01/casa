@@ -12,5 +12,100 @@ footer{
 
   .align-bottom-absolute{
     bottom: 12px;
+
+    a{
+      text-decoration: underline;
+    }
+  }
+
+  .container-year{
+    position: relative;
+    display: inline-block;
+    .logo-year{
+      right: calc(100% - 3vw);
+      position: absolute;
+      top: -2vw;
+
+      svg{
+        height: 12vw;
+        width: 12vw;
+        -webkit-animation: rotating 8s linear infinite;
+        -moz-animation: rotating 8s linear infinite;
+        -ms-animation: rotating 8s linear infinite;
+        -o-animation: rotating 8s linear infinite;
+        animation: rotating 8s linear infinite;
+      }
+    }
+  }
+
+  &.single{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: $beige;
+    margin-top: 130px;
+    padding-top: 200px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.5) 83%, rgba(0, 0, 0, 0.5));
+    }
+
+
+    .nav-footer a{
+      color: #FFF;
+    }
+
+    .paginate{
+      padding-bottom: 140px;
+      border-bottom: 2px solid $beige;
+      margin-bottom: 100px;
+    }
+
+    svg{
+      circle{
+        stroke: $beige;
+      }
+      path{
+        fill: $beige;
+      }
+      text{
+        fill: $beige;
+      }
+    }
+  }
+}
+
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

@@ -1,0 +1,116 @@
+.dark-theme{
+  background: #1c1c1c;
+  color: $beige;
+
+
+  .header-logo{
+    svg{
+        g{
+          fill: $beige;
+        }
+    }
+  }
+
+
+
+  [type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before{
+    border: 1px solid $beige;
+  }
+  [type="checkbox"]:not(:checked) + label::after, [type="checkbox"]:checked + label::after{
+    background: $beige;
+  }
+
+
+  button.navigation{
+    border: solid 1.1px rgba(249, 245, 233, 0.2);
+
+    &:before{
+      color: $beige;
+    }
+    .bar{
+      background: $beige;
+    }
+  }
+
+  footer .nav-footer a{
+    color: $beige;
+  }
+
+  .has-border{
+    border-color: $beige;
+  }
+
+  .latest-work .nav-date li.is-active:before{
+    background: $beige;
+  }
+  .latest-work .nav-date li a{
+    color: $beige;
+  }
+
+  section.about-me:before,
+  section.work-with-me:before{
+    background: $beige;
+  }
+
+  section.one-more-thing .title-border{
+    border-color: $beige;
+  }
+  svg{
+    circle{
+      stroke: $beige;
+    }
+    path{
+      fill: $beige;
+    }
+    text{
+      fill: $beige;
+    }
+  }
+
+  .button-round{
+    color: $beige;
+    .round{
+      border-color: $beige;
+    }
+  }
+
+  .case-resume .container-info-resume:before{
+    background: $beige;
+  }
+
+  .slick-dots li{
+    &:hover, &.slick-active{
+      button:before{
+        background: #FFF;
+      }
+    }
+  }
+  .intro-page.case .has-border{
+    border-color: $beige;
+  }
+}
+
+
+// Element transition
+
+$timeTransition : .3s;
+body{
+  transition: $timeTransition background-color, color;
+}
+
+.header-logo{
+  svg{
+    transition: $timeTransition;
+  }
+}
+
+button.navigation{
+  transition: $timeTransition;
+
+  &:before{
+    transition: $timeTransition;
+  }
+  .bar{
+    transition: $timeTransition;
+  }
+}
