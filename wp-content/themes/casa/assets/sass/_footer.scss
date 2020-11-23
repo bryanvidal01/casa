@@ -81,6 +81,60 @@ footer{
 }
 
 
+.loader-container{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  background: $beige;
+  padding: 75px;
+  overflow: hidden;
+
+  .text-loader{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    color: #f9f5e9;
+    mix-blend-mode: difference;
+
+  }
+
+  .percent-number{
+    position: absolute;
+    top: 50%;
+    right: 75px;
+    font-size: 20vw;
+    transform: translateY(-50%);
+    z-index: 30;
+    color: #f9f5e9;
+    mix-blend-mode: difference;
+
+    &:after{
+      content: '%';
+      font-size: 10vw;
+      top: 5vw;
+      left: 1vw;
+      position: relative;
+      vertical-align: top;
+      font-family: $sans_serif_thin;
+    }
+  }
+
+  .masque{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: .4s;
+
+  }
+}
+
 @-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);

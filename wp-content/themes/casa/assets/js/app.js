@@ -70,8 +70,62 @@ $(window).ready(function () {
         }
     });
 
-});
+    // Navigation
+    function scrollToAnimate(scrollTo){
+        $("html, body").stop().animate({scrollTop:scrollTo}, 100, 'swing');
+    }
 
+    $('button.navigation').click(function(){
+        if(!$('body').hasClass('navigation-open')){
+            scrollToAnimate(0);
+
+            setTimeout(function(){
+                $('body').addClass('navigation-open');
+            }, 100);
+        }else{
+            $('body').removeClass('navigation-open');
+        }
+    })
+
+
+    // Loader
+    var loaderContainer = $('.loader-container');
+    var loaderMasque = loaderContainer.find('.masque');
+    var loaderValue = loaderContainer.find('.percent-number');
+    var startValue = 0;
+
+
+    var intervalLoad = setInterval(function(){
+        if(startValue >= 78){
+            clearTimeout(intervalLoad);
+        }
+
+        document.getElementById('percent-load').innerHTML = startValue;
+
+        $('#masque').css('transform', 'translate('+startValue +'%, 0)');
+
+        startValue = startValue + 3;
+    }, 100);
+
+
+    $(window).on('load', function () {
+
+        clearTimeout(intervalLoad);
+
+        document.getElementById('percent-load').innerHTML = 100;
+        $('#masque').css('transform', 'translate(100%, 0)');
+
+        setTimeout(function(){
+            $('.loader-container').fadeOut();
+        }, 400);
+    });
+
+
+    // Animations
+
+    
+
+});
 
 
 

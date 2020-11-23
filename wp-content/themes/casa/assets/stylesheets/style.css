@@ -12531,6 +12531,13 @@ header .select-theme {
   padding-top: 17px;
   display: block;
 }
+/* line 17, ../sass/_header.scss */
+header .header-logo,
+header .intro,
+header button.navigation {
+  position: relative;
+  z-index: 50;
+}
 
 /* line 1, ../sass/_intro.scss */
 section.intro-page {
@@ -12866,6 +12873,59 @@ footer.single svg path {
 /* line 76, ../sass/_footer.scss */
 footer.single svg text {
   fill: #f9f5e9;
+}
+
+/* line 84, ../sass/_footer.scss */
+.loader-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  background: #f9f5e9;
+  padding: 75px;
+  overflow: hidden;
+}
+/* line 95, ../sass/_footer.scss */
+.loader-container .text-loader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  color: #f9f5e9;
+  mix-blend-mode: difference;
+}
+/* line 105, ../sass/_footer.scss */
+.loader-container .percent-number {
+  position: absolute;
+  top: 50%;
+  right: 75px;
+  font-size: 20vw;
+  transform: translateY(-50%);
+  z-index: 30;
+  color: #f9f5e9;
+  mix-blend-mode: difference;
+}
+/* line 115, ../sass/_footer.scss */
+.loader-container .percent-number:after {
+  content: '%';
+  font-size: 10vw;
+  top: 5vw;
+  left: 1vw;
+  position: relative;
+  vertical-align: top;
+  font-family: "oakes_grotesklight";
+}
+/* line 126, ../sass/_footer.scss */
+.loader-container .masque {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: .4s;
 }
 
 @-webkit-keyframes rotating {
@@ -13567,7 +13627,114 @@ section.one-more-thing .small-medium {
   color: black;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 1, ../sass/_menu.scss */
+.navigation-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #1c1c1c;
+  display: none;
+  padding: 50px 60px;
+  color: #f9f5e9;
+}
+/* line 13, ../sass/_menu.scss */
+.navigation-container .text-location span {
+  padding-right: 18px;
+}
+/* line 18, ../sass/_menu.scss */
+.navigation-container .align-container-menu {
+  height: calc( 100vh - 255px );
+  display: flex;
+  align-items: center;
+}
+/* line 24, ../sass/_menu.scss */
+.navigation-container .navigation-cases {
+  margin-top: 40px;
+}
+/* line 26, ../sass/_menu.scss */
+.navigation-container .navigation-cases li {
+  display: block;
+}
+/* line 29, ../sass/_menu.scss */
+.navigation-container .navigation-cases li a {
+  display: inline-block;
+  padding: 5px 0;
+}
+/* line 36, ../sass/_menu.scss */
+.navigation-container .info-left {
+  bottom: 60px;
+  left: 60px;
+  position: absolute;
+}
+/* line 42, ../sass/_menu.scss */
+.navigation-container .info-right {
+  bottom: 60px;
+  right: 60px;
+  position: absolute;
+}
+/* line 47, ../sass/_menu.scss */
+.navigation-container .info-right .social-menu {
+  margin-bottom: 0;
+}
+/* line 49, ../sass/_menu.scss */
+.navigation-container .info-right .social-menu li {
+  display: inline-block;
+}
+/* line 52, ../sass/_menu.scss */
+.navigation-container .info-right .social-menu li:before {
+  content: '/';
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 14px;
+  position: relative;
+  top: -2px;
+}
+/* line 61, ../sass/_menu.scss */
+.navigation-container .info-right .social-menu li:first-child:before {
+  display: none;
+}
+
+/* line 70, ../sass/_menu.scss */
+.navigation-open {
+  overflow: hidden;
+}
+/* line 72, ../sass/_menu.scss */
+.navigation-open .navigation-container {
+  display: block;
+}
+/* line 77, ../sass/_menu.scss */
+.navigation-open header .intro {
+  color: #f9f5e9;
+}
+/* line 82, ../sass/_menu.scss */
+.navigation-open button.navigation {
+  border: solid 1.1px rgba(249, 245, 233, 0.2);
+}
+/* line 85, ../sass/_menu.scss */
+.navigation-open button.navigation:before {
+  color: #f9f5e9;
+}
+/* line 88, ../sass/_menu.scss */
+.navigation-open button.navigation .bar {
+  background: #f9f5e9;
+}
+/* line 91, ../sass/_menu.scss */
+.navigation-open button.navigation .bar:nth-child(1) {
+  transform: rotate(45deg) translate(-5px, 3px);
+  top: 35px;
+}
+/* line 96, ../sass/_menu.scss */
+.navigation-open button.navigation .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(-2px, -6px);
+}
+/* line 104, ../sass/_menu.scss */
+.navigation-open .header-logo svg g {
+  fill: #f9f5e9;
+}
+
+/* line 20, ../sass/style.scss */
 body {
   background: #f9f5e9;
   font-family: "oakes_groteskregular";
@@ -13576,12 +13743,16 @@ body {
   overflow-x: hidden;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 a {
   color: inherit;
 }
-
 /* line 31, ../sass/style.scss */
+a:hover {
+  color: inherit;
+}
+
+/* line 36, ../sass/style.scss */
 button:focus {
   outline: none;
 }

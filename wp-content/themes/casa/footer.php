@@ -56,6 +56,19 @@
     </div>
 </footer>
 
+<div class="loader-container">
+    <div class="text-loader sans-serif uppercase small">
+        i got 99 problems<br/>
+        but a portfolio ain't one
+    </div>
+
+    <div class="percent-number serif italic" id="percent-load">
+        0
+    </div>
+
+    <div class="masque" id="masque"></div>
+</div>
+
         <?php wp_footer(); ?>
 
     </body>
