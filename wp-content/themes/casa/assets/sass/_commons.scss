@@ -45,9 +45,34 @@
 }
 
 .has-border{
-  border-bottom: 0.3vw solid $black;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 
+  &:after{
+    content: '';
+    width: 100%;
+    height: .35vw;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-101%);
+    left: 0;
+  }
+
+  &.is-hover{
+    &:after{
+      transform: translateX(-0%);
+      transition: .5s;
+    }
+
+    &.is-out{
+      &:after{
+        transform: translateX(101%);
+        transition: .5s;
+      }
+    }
+  }
 }
 
 

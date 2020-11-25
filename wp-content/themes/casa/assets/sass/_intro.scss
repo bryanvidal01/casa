@@ -42,7 +42,6 @@ section.intro-page{
   .img-2{
     width: 9vw;
     position: relative;
-    top: -4vw;
   }
 
 
@@ -56,5 +55,15 @@ section.intro-page{
   .title{
     z-index: 3;
     position: relative;
+    line-height: 15vw;
+    margin-top: -4vw;
+  }
+
+  .title-parallax{
+    display: inline-block;
+  }
+
+  h2.last{
+    margin-top: -2vw;
   }
 }

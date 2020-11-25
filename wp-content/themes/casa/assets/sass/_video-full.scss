@@ -17,8 +17,9 @@
   video{
     position: absolute;
     width: 130%;
-    height: 100%;
-    top: 0;
+    height: 130%;
+    top: -50%;
+    bottom: 0;
     left: 0;
     object-fit: cover;
   }

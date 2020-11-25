@@ -11,6 +11,7 @@
 
     <script  src='<?php echo get_template_directory_uri();?>/assets/js/jquery.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/ScrollTrigger.min.js"></script>
     <script  src='<?php echo get_template_directory_uri();?>/assets/js/app.js'></script>
     <?php wp_head(); ?>
 </head>

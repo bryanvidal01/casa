@@ -9,6 +9,29 @@ $(document).ready(function(){
         el.find('.follow-image').css({left: relX, top: relY})
     });
 
+    var animImage;
+
+    $(".more-studies").mouseenter(function(){
+        var imageVisible = 1;
+        var el = jQuery(this);
+
+        el.find('img:nth-child(1)').addClass('is-visible');
+
+        animImage = setInterval(function(){
+            if(imageVisible == 3){
+                imageVisible = 1;
+            }else{
+                imageVisible++;
+            }
+            el.find('img').removeClass('is-visible');
+            el.find('img:nth-child(' + imageVisible + ')').addClass('is-visible');
+        }, 400);
+    });
+
+    $(".more-studies").mouseleave(function(){
+        clearInterval(animImage);
+    });
+
     const slider = $('.slider').slick({
         centerMode: true,
         centerPadding: '60px',
@@ -118,12 +141,60 @@ $(window).ready(function () {
         setTimeout(function(){
             $('.loader-container').fadeOut();
         }, 400);
+
+
+        // Animations
+        $('.parallax-item').each(function( index ) {
+            var el = jQuery(this);
+            var gravity = el.data('gravity');
+            var parent = el.data('parent');
+
+            if(parent){
+                parent = '.' + parent;
+            }
+
+            gsap.to(el, {
+                yPercent: gravity,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: parent,
+                    // start: "top bottom", // the default values
+                    // end: "bottom top",
+                    scrub: true
+                },
+            });
+
+        });
+
+
+        $(".has-border")
+            .on("mouseenter", function(e) {
+                var el = jQuery(this);
+
+                el.addClass('is-hover');
+            })
+            .on("mouseout", function(e) {
+                var el = jQuery(this);
+                el.addClass('is-hover is-out');
+
+                setTimeout(function(){
+                    el.removeClass('is-hover is-out')
+                }, 500);
+            });
+
+
+        $('.masque').each(function(){
+            var el = jQuery(this);
+            var delay = el.data('delay');
+
+            setTimeout(function(){
+                el.addClass('visible');
+            }, delay);
+        });
     });
 
 
-    // Animations
 
-    
 
 });
 

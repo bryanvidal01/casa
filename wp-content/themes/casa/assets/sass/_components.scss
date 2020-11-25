@@ -2,20 +2,24 @@
   position: relative;
   display: block;
   .follow-image{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
+    transition: visibility .2s, opacity .2s linear;
 
     img{
       position: absolute;
+    }
 
-      &:nth-child(2){
-        transform: translate(20px, 20px);
-        z-index: 2;
-      }
-      &:nth-child(3){
-        transform: translate(40px, 40px);
-        z-index: 2;
-
+    &.multiples{
+      img{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .2s, opacity .2s linear;
+        &.is-visible{
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
 
@@ -24,7 +28,8 @@
 
   &:hover{
     .follow-image{
-      display: block;
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -95,6 +100,30 @@ button.navigation{
     &:last-child{
       top: auto;
       bottom: 31px;
+    }
+  }
+}
+
+
+
+.masque{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  .masque-hide{
+    transform: translateY(100%);
+    overflow: hidden;
+    transition: .8s;
+
+    &.has-padding{
+      padding-left: 1vw;
+    }
+  }
+
+  &.visible{
+    .masque-hide{
+      overflow: visible;
+      transform: translateY(0%);
     }
   }
 }
