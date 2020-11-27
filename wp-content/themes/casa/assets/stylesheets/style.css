@@ -12240,36 +12240,47 @@ a.text-dark:focus, a.text-dark:hover {
   transition: .5s;
 }
 
+/* line 79, ../sass/_commons.scss */
+.container-image-parallax {
+  overflow: hidden;
+}
 /* line 82, ../sass/_commons.scss */
+.container-image-parallax img {
+  transform: scale(1.2);
+  margin-top: -8%;
+  position: relative;
+}
+
+/* line 91, ../sass/_commons.scss */
 .color-beige {
   color: #f9f5e9;
 }
 
-/* line 86, ../sass/_commons.scss */
+/* line 95, ../sass/_commons.scss */
 .background-beige {
   background: #f9f5e9;
 }
 
-/* line 94, ../sass/_commons.scss */
+/* line 103, ../sass/_commons.scss */
 .container-checkbox {
   position: relative;
 }
 
-/* line 97, ../sass/_commons.scss */
+/* line 106, ../sass/_commons.scss */
 [type="checkbox"] {
   position: absolute;
   left: 0;
   opacity: 0.01;
 }
 
-/* line 103, ../sass/_commons.scss */
+/* line 112, ../sass/_commons.scss */
 [type="checkbox"] + label {
   position: relative;
   padding-left: 27px;
   cursor: pointer;
 }
 
-/* line 109, ../sass/_commons.scss */
+/* line 118, ../sass/_commons.scss */
 [type="checkbox"]:not(:checked) + label::before,
 [type="checkbox"]:checked + label::before {
   content: '';
@@ -12285,7 +12296,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 /* Aspect de la coche */
-/* line 124, ../sass/_commons.scss */
+/* line 133, ../sass/_commons.scss */
 [type="checkbox"]:not(:checked) + label::after,
 [type="checkbox"]:checked + label::after {
   content: '';
@@ -12302,24 +12313,24 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* Aspect non cochée */
 /* Aspect cochée */
-/* line 145, ../sass/_commons.scss */
+/* line 154, ../sass/_commons.scss */
 [type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: translate3D(6px, 0, 0);
 }
 
-/* line 151, ../sass/_commons.scss */
+/* line 160, ../sass/_commons.scss */
 .image-shadow {
   box-shadow: 0 20px 40px black;
   max-width: 100%;
 }
 
-/* line 157, ../sass/_commons.scss */
+/* line 166, ../sass/_commons.scss */
 .no-margin {
   margin-bottom: 0;
 }
 
-/* line 162, ../sass/_commons.scss */
+/* line 171, ../sass/_commons.scss */
 .align-bottom-absolute {
   position: absolute;
   bottom: 0;
@@ -13329,51 +13340,54 @@ section.one-more-thing .small-medium {
   max-width: 60%;
   margin: 0 auto;
   display: block;
-  position: absolute;
-  bottom: -10vw;
+  margin-top: 20vw;
   margin-left: 20%;
 }
+/* line 185, ../sass/_page-case.scss */
+.case-two-image-not-aligned .img-2 img {
+  width: 100%;
+}
 
-/* line 188, ../sass/_page-case.scss */
+/* line 191, ../sass/_page-case.scss */
 .case-image-full-container {
   padding: 0 60px;
   margin-bottom: 140px;
 }
-/* line 191, ../sass/_page-case.scss */
+/* line 194, ../sass/_page-case.scss */
 .case-image-full-container img {
   width: 100%;
 }
 
-/* line 196, ../sass/_page-case.scss */
+/* line 199, ../sass/_page-case.scss */
 .three-cols-images {
   padding: 0 60px;
   margin-bottom: 140px;
 }
-/* line 200, ../sass/_page-case.scss */
+/* line 203, ../sass/_page-case.scss */
 .three-cols-images img {
   max-width: 100%;
   display: block;
   margin-bottom: 30px;
 }
-/* line 206, ../sass/_page-case.scss */
+/* line 209, ../sass/_page-case.scss */
 .three-cols-images .hide-space {
   height: 14vw;
 }
 
-/* line 212, ../sass/_page-case.scss */
+/* line 215, ../sass/_page-case.scss */
 .case-resume {
   padding: 0 60px;
 }
-/* line 215, ../sass/_page-case.scss */
+/* line 218, ../sass/_page-case.scss */
 .case-resume .resume-text {
   margin-top: 30px;
 }
-/* line 219, ../sass/_page-case.scss */
+/* line 222, ../sass/_page-case.scss */
 .case-resume .container-info-resume {
   position: relative;
   padding-top: 30px;
 }
-/* line 222, ../sass/_page-case.scss */
+/* line 225, ../sass/_page-case.scss */
 .case-resume .container-info-resume:before {
   content: '';
   display: block;
@@ -13383,7 +13397,7 @@ section.one-more-thing .small-medium {
   background: #000;
   margin-bottom: 60px;
 }
-/* line 232, ../sass/_page-case.scss */
+/* line 235, ../sass/_page-case.scss */
 .case-resume .container-info-resume .button-round {
   margin-top: -10px;
 }

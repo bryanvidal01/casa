@@ -33,7 +33,7 @@ get_header();
         </div>
     </h2>
     <h2 class="last">
-        <span class="title sans-serif big light parallax-item">
+        <span class="title sans-serif big light">
             <div class="masque" data-delay="420">
                 <div class="masque-hide">
                 &

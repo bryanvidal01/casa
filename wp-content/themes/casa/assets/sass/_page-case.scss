@@ -179,9 +179,12 @@
     max-width: 60%;
     margin: 0 auto;
     display: block;
-    position: absolute;
-    bottom: -10vw;
+    margin-top: 20vw;
     margin-left: 20%;
+
+    img{
+      width: 100%;
+    }
   }
 }
 

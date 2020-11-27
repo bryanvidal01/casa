@@ -5,10 +5,13 @@ Template Name: Project
 
 get_header();
 ?>
+    <div id="progress-bar"></div>
     <section class="intro-page case">
         <div class="image-case">
             <div class="container-image">
-                <img src="https://images.pexels.com/photos/2618784/pexels-photo-2618784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="container-image-parallax parallax-item" data-gravity="300">
+                    <img src="https://images.pexels.com/photos/2618784/pexels-photo-2618784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="parallax-item" data-gravity="400">
+                </div>
             </div>
             <button class="button-round">
                 <div class="round"></div>
@@ -73,7 +76,9 @@ get_header();
     </section>
 
     <section class="case-image-full">
-        <img src="https://images.pexels.com/photos/670791/pexels-photo-670791.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+        <div class="container-image-parallax">
+            <img src="https://images.pexels.com/photos/5893845/pexels-photo-5893845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="parallax-item" data-gravity="50" data-parent="case-image-full">
+        </div>
     </section>
 
     <section class="case-title-text">
@@ -94,10 +99,14 @@ get_header();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="https://images.pexels.com/photos/5623749/pexels-photo-5623749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="container-image-parallax">
+                        <img src="https://images.pexels.com/photos/5623749/pexels-photo-5623749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="30" data-parent="case-two-image" alt="">
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                    <img src="https://images.pexels.com/photos/5273755/pexels-photo-5273755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="container-image-parallax">
+                        <img src="https://images.pexels.com/photos/5273755/pexels-photo-5273755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="30" data-parent="case-two-image" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,10 +168,14 @@ get_header();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="https://images.pexels.com/photos/5327022/pexels-photo-5327022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-1" alt="">
+                    <div class="container-image-parallax">
+                        <img src="https://images.pexels.com/photos/4814744/pexels-photo-4814744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-1 parallax-item" data-gravity="40" data-parent="case-two-image-not-aligned" alt="">
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                    <img src="https://images.pexels.com/photos/1046340/pexels-photo-1046340.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2" alt="">
+                    <div class="container-image-parallax img-2">
+                        <img src="https://images.pexels.com/photos/5900516/pexels-photo-5900516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="30" data-parent="case-two-image-not-aligned" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,7 +185,9 @@ get_header();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <img src="https://images.pexels.com/photos/3727219/pexels-photo-3727219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="container-image-parallax">
+                        <img src="https://images.pexels.com/photos/3727219/pexels-photo-3727219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="30" data-parent="case-image-full-container" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,16 +196,17 @@ get_header();
     <section class="three-cols-images">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4">
-                    <img src="https://images.pexels.com/photos/5639629/pexels-photo-5639629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                    <img src="https://images.pexels.com/photos/5639629/pexels-photo-5639629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 parallax-item" data-gravity="-30" data-parent="three-cols-images">
                     <div class="hide-space"></div>
+                    <img src="https://images.pexels.com/photos/5639629/pexels-photo-5639629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <img src="https://images.pexels.com/photos/5639629/pexels-photo-5639629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </div>
+                <div class="col-sm-4 parallax-item" data-gravity="10" data-parent="three-cols-images">
                     <img src="https://images.pexels.com/photos/1679772/pexels-photo-1679772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
                     <img src="https://images.pexels.com/photos/1679772/pexels-photo-1679772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 parallax-item" data-gravity="-30" data-parent="three-cols-images">
+                    <div class="hide-space"></div>
                     <img src="https://images.pexels.com/photos/5170697/pexels-photo-5170697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
                     <img src="https://images.pexels.com/photos/5170697/pexels-photo-5170697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
                 </div>

@@ -76,6 +76,15 @@
 }
 
 
+.container-image-parallax{
+  overflow: hidden;
+
+  img{
+    transform: scale(1.2);
+    margin-top: -8%;
+    position: relative;
+  }
+}
 
 // Color
 
