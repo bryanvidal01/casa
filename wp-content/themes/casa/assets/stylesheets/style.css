@@ -12734,6 +12734,10 @@ section.intro-page.case .has-border:after {
   color: #FFF;
 }
 /* line 7, ../sass/_video-full.scss */
+.section-video-full .image-background-mobile {
+  display: none;
+}
+/* line 11, ../sass/_video-full.scss */
 .section-video-full:before {
   content: '';
   position: absolute;
@@ -12744,7 +12748,7 @@ section.intro-page.case .has-border:after {
   background: rgba(0, 0, 0, 0.3);
   z-index: 20;
 }
-/* line 17, ../sass/_video-full.scss */
+/* line 21, ../sass/_video-full.scss */
 .section-video-full video {
   position: absolute;
   width: 130%;
@@ -12754,21 +12758,21 @@ section.intro-page.case .has-border:after {
   left: 0;
   object-fit: cover;
 }
-/* line 27, ../sass/_video-full.scss */
+/* line 31, ../sass/_video-full.scss */
 .section-video-full .container-fluid {
   z-index: 30;
   position: relative;
 }
-/* line 32, ../sass/_video-full.scss */
+/* line 36, ../sass/_video-full.scss */
 .section-video-full .last-text {
   max-width: 340px;
   text-align: left;
 }
-/* line 37, ../sass/_video-full.scss */
+/* line 41, ../sass/_video-full.scss */
 .section-video-full .button-round {
   margin: 9vw 0;
 }
-/* line 41, ../sass/_video-full.scss */
+/* line 45, ../sass/_video-full.scss */
 .section-video-full .author-letter {
   font-size: 80px;
   line-height: 60px;
@@ -14037,4 +14041,368 @@ a:hover {
 /* line 36, ../sass/style.scss */
 button:focus {
   outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 3, ../sass/_responsive.scss */
+  html, body {
+    width: 100vw;
+    overflow: auto;
+  }
+
+  /* line 8, ../sass/_responsive.scss */
+  .pointer {
+    display: none;
+  }
+
+  /* line 12, ../sass/_responsive.scss */
+  .header-logo svg {
+    width: 20vw;
+  }
+
+  /* line 16, ../sass/_responsive.scss */
+  .title.big {
+    font-size: 14.7vw;
+  }
+
+  /* line 20, ../sass/_responsive.scss */
+  .title.medium {
+    font-size: 10vw;
+    line-height: 1em;
+  }
+
+  /* line 25, ../sass/_responsive.scss */
+  body {
+    overflow: visible;
+  }
+
+  /* line 29, ../sass/_responsive.scss */
+  .has-border {
+    border-bottom: 4px solid #000;
+  }
+
+  /* line 33, ../sass/_responsive.scss */
+  header {
+    padding: 20px 0px;
+  }
+  /* line 36, ../sass/_responsive.scss */
+  header .intro {
+    display: none;
+  }
+  /* line 39, ../sass/_responsive.scss */
+  header .select-theme {
+    display: none;
+  }
+
+  /* line 44, ../sass/_responsive.scss */
+  section.intro-page.home {
+    padding: 160px 15px 40px;
+  }
+  /* line 47, ../sass/_responsive.scss */
+  section.intro-page.home .title.big {
+    font-size: 16.7vw;
+  }
+  /* line 50, ../sass/_responsive.scss */
+  section.intro-page.home img {
+    display: none;
+  }
+
+  /* line 56, ../sass/_responsive.scss */
+  .image-follow .follow-image {
+    display: none;
+  }
+
+  /* line 61, ../sass/_responsive.scss */
+  .skills .title {
+    text-align: center;
+    display: block;
+    font-size: 25vw;
+    line-height: 1em;
+    padding-top: 30px;
+  }
+
+  /* line 70, ../sass/_responsive.scss */
+  .section-video-full, section.skills {
+    padding: 40px 0;
+  }
+
+  /* line 75, ../sass/_responsive.scss */
+  .section-video-full video {
+    display: none;
+  }
+  /* line 78, ../sass/_responsive.scss */
+  .section-video-full .image-background-mobile {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-top: -100%;
+    object-fit: cover;
+  }
+
+  /* line 90, ../sass/_responsive.scss */
+  section.latest-work {
+    padding: 40px 0;
+  }
+
+  /* line 94, ../sass/_responsive.scss */
+  .push-project {
+    padding: 30px;
+  }
+  /* line 98, ../sass/_responsive.scss */
+  .push-project .background-project {
+    margin-top: -80%;
+  }
+  /* line 102, ../sass/_responsive.scss */
+  .push-project .info-project {
+    margin-top: 30px;
+  }
+  /* line 105, ../sass/_responsive.scss */
+  .push-project .image-shadow {
+    max-width: 80%;
+    display: block;
+    margin: 30px auto;
+  }
+  /* line 111, ../sass/_responsive.scss */
+  .push-project .content-project {
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  /* line 115, ../sass/_responsive.scss */
+  .push-project .content-project .button-round {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* line 122, ../sass/_responsive.scss */
+  .more-studies {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  /* line 127, ../sass/_responsive.scss */
+  footer {
+    padding: 0;
+  }
+  /* line 130, ../sass/_responsive.scss */
+  footer .nav-footer {
+    margin-bottom: 40px;
+  }
+  /* line 134, ../sass/_responsive.scss */
+  footer .text-footer-1 {
+    margin-bottom: 30px;
+  }
+  /* line 137, ../sass/_responsive.scss */
+  footer .text-footer-2 {
+    margin-bottom: 30px;
+  }
+  /* line 141, ../sass/_responsive.scss */
+  footer .align-bottom-absolute {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 30px;
+    display: none;
+  }
+  /* line 148, ../sass/_responsive.scss */
+  footer .title.big {
+    font-size: 30.7vw;
+    line-height: 1em;
+    padding-bottom: 30px;
+  }
+  /* line 154, ../sass/_responsive.scss */
+  footer .container-year .logo-year {
+    top: 0;
+  }
+  /* line 156, ../sass/_responsive.scss */
+  footer .container-year .logo-year svg {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  /* line 166, ../sass/_responsive.scss */
+  .navigation-container {
+    padding: 100px 0px 60px;
+    overflow: scroll;
+  }
+  /* line 169, ../sass/_responsive.scss */
+  .navigation-container .title.medium {
+    font-size: 18vw;
+  }
+  /* line 172, ../sass/_responsive.scss */
+  .navigation-container .fade-1 {
+    margin-bottom: 20px;
+  }
+  /* line 175, ../sass/_responsive.scss */
+  .navigation-container .align-container-menu {
+    display: block;
+    overflow: auto;
+    height: auto;
+  }
+  /* line 182, ../sass/_responsive.scss */
+  .navigation-container .info-left, .navigation-container .info-right {
+    position: static;
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+  /* line 188, ../sass/_responsive.scss */
+  .navigation-container .info-left {
+    margin-top: 30px;
+  }
+  /* line 192, ../sass/_responsive.scss */
+  .navigation-container .navigation-cases {
+    margin-top: 20px;
+  }
+
+  /* line 200, ../sass/_responsive.scss */
+  .intro-page.case {
+    padding: 120px 15px 80px;
+  }
+  /* line 203, ../sass/_responsive.scss */
+  .intro-page.case .image-case {
+    position: static;
+    width: 100%;
+    margin-bottom: 140px;
+    transform: translateY(10px);
+  }
+  /* line 209, ../sass/_responsive.scss */
+  .intro-page.case .image-case .button-round {
+    top: 90%;
+    right: 0;
+  }
+
+  /* line 216, ../sass/_responsive.scss */
+  .intro-case-text,
+  .case-image-full,
+  .case-title-text,
+  .case-two-image,
+  .case-title-text-category,
+  .case-carrousel,
+  .case-two-image-not-aligned,
+  .case-image-full-container,
+  .three-cols-images,
+  .case-resume {
+    padding: 0 0;
+    margin-bottom: 60px;
+  }
+
+  /* line 231, ../sass/_responsive.scss */
+  .case-title-text .text-content {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  /* line 238, ../sass/_responsive.scss */
+  .case-two-image .container-image-parallax {
+    margin-bottom: 15px;
+  }
+
+  /* line 243, ../sass/_responsive.scss */
+  .case-carrousel .slick-dots {
+    margin-top: 40px;
+    width: calc( 100% - 30px );
+  }
+
+  /* line 248, ../sass/_responsive.scss */
+  .case-title-text-category .text-content {
+    margin-top: 30px;
+  }
+
+  /* line 253, ../sass/_responsive.scss */
+  .case-two-image-not-aligned .img-2 {
+    margin-top: 30px;
+  }
+
+  /* line 258, ../sass/_responsive.scss */
+  .slick-arrow {
+    display: none !important;
+  }
+
+  /* line 266, ../sass/_responsive.scss */
+  .three-cols-images .parallax-item {
+    transform: translate(0, 0) !important;
+  }
+  /* line 270, ../sass/_responsive.scss */
+  .three-cols-images img {
+    margin-bottom: 15px;
+  }
+  /* line 274, ../sass/_responsive.scss */
+  .three-cols-images .hide-space {
+    display: none;
+  }
+
+  /* line 280, ../sass/_responsive.scss */
+  .case-resume .container-info-resume .button-round {
+    display: block;
+    margin: 30px auto;
+  }
+
+  /* line 286, ../sass/_responsive.scss */
+  footer.single {
+    padding-top: 30px;
+  }
+  /* line 288, ../sass/_responsive.scss */
+  footer.single .image-footer {
+    margin-top: -100%;
+  }
+  /* line 292, ../sass/_responsive.scss */
+  footer.single .button-round {
+    margin-top: 30px;
+  }
+  /* line 296, ../sass/_responsive.scss */
+  footer.single .paginate {
+    margin-bottom: 30px;
+    padding-bottom: 60px;
+  }
+
+  /* line 305, ../sass/_responsive.scss */
+  section.intro-page.about {
+    padding: 120px 15px 80px;
+  }
+  /* line 308, ../sass/_responsive.scss */
+  section.intro-page.about img {
+    display: none;
+  }
+  /* line 311, ../sass/_responsive.scss */
+  section.intro-page.about img.img-3 {
+    display: none;
+  }
+
+  /* line 317, ../sass/_responsive.scss */
+  section.work-with-me, section.about-me, section.one-more-thing {
+    padding: 0 0;
+    margin-bottom: 60px;
+  }
+
+  /* line 323, ../sass/_responsive.scss */
+  section.about-me .info-about-me {
+    padding-top: 30px;
+  }
+
+  /* line 328, ../sass/_responsive.scss */
+  section.work-with-me .info-about-me {
+    padding-top: 30px;
+  }
+
+  /* line 332, ../sass/_responsive.scss */
+  section.one-more-thing {
+    margin-bottom: 60px;
+  }
+  /* line 334, ../sass/_responsive.scss */
+  section.one-more-thing .no-margin {
+    margin-top: 30px;
+  }
+  /* line 337, ../sass/_responsive.scss */
+  section.one-more-thing .logo-ck-about {
+    margin-bottom: 50px;
+  }
+  /* line 341, ../sass/_responsive.scss */
+  section.one-more-thing .image-one-more-thing {
+    margin-bottom: 50px;
+  }
+  /* line 343, ../sass/_responsive.scss */
+  section.one-more-thing .image-one-more-thing img {
+    width: 100%;
+  }
 }

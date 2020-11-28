@@ -23,14 +23,14 @@ get_header();
         <h2 class="title italic serif big">
             École
         </h2>
-        <div class="col-sm-10 offset-2">
+        <div class="col-sm-10 offset-sm-2 col-12">
             <h2 class="title sans-serif big light text-left world-2 has-border">
                 Van cleef<br/>
                 & Arples
             </h2>
 
             <div class="row list-info-case">
-                <div class="col-sm-2">
+                <div class="col-3 col-sm-2">
                     <p class="small light label">
                         Agency
                     </p>
@@ -39,7 +39,7 @@ get_header();
                         Adyax
                     </h3>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-6 col-sm-2">
                     <p class="small light label">
                         Role
                     </p>
@@ -49,7 +49,7 @@ get_header();
                         Animation
                     </h3>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-3 col-sm-2">
                     <p class="small light label">
                         Year
                     </p>
@@ -66,7 +66,7 @@ get_header();
     <section class="intro-case-text">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 offset-2">
+                <div class="col-sm-3 offset-sm-2 col-12">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
@@ -83,7 +83,7 @@ get_header();
 
     <section class="case-title-text">
         <div class="container-fluid">
-            <div class="col-sm-6 offset-5">
+            <div class="col-sm-6 offset-sm-5">
                 <h3 class="title medium title-strate">
                     New interface
                     <i>for</i> <strong>the futur</strong>
@@ -229,11 +229,11 @@ get_header();
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-7 offset-1">
+                <div class="col-sm-7 offset-sm-1">
                     <div class="row container-info-resume">
                         <div class="col-sm-6">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <p class="small light label">
                                         Agency
                                     </p>
@@ -241,7 +241,7 @@ get_header();
                                         Adyax
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <p class="small light label">
                                         Role
                                     </p>
@@ -250,7 +250,7 @@ get_header();
                                         Animation
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <p class="small light label">
                                         Year
                                     </p>
@@ -258,7 +258,7 @@ get_header();
                                         2020
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <p class="small light label">
                                         Tools
                                     </p>

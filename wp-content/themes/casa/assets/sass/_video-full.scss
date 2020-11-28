@@ -4,6 +4,10 @@
   padding: 60px 45px;
   color: #FFF;
 
+  .image-background-mobile{
+    display: none;
+  }
+
   &:before{
     content: '';
     position: absolute;

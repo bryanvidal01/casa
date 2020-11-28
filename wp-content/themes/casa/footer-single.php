@@ -3,12 +3,12 @@
     <div class="paginate">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-4">
                     <p class="small light label">
                         Next case
                     </p>
                 </div>
-                <div class="col-sm-8 text-right">
+                <div class="col-8 text-right">
                     <h3 class="title medium serif italic">
                         Inspired
                     </h3>

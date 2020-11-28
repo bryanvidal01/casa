@@ -16,7 +16,7 @@ get_header();
         </div>
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
-        <div class="masque parallax-item" data-gravity="-600" data-parent="" data-delay="700">
+        <div class="masque parallax-item d-none d-md-inline-block" data-gravity="-600" data-parent="" data-delay="700">
             <div class="masque-hide">
                 <img src="https://images.pexels.com/photos/5255191/pexels-photo-5255191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1" alt="">
             </div>
@@ -26,7 +26,7 @@ get_header();
                 experience
             </div>
         </div>
-        <div class="masque" data-delay="400">
+        <div class="masque d-none d-md-inline-block" data-delay="400">
             <div class="masque-hide">
                 <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-2 parallax-item" data-gravity="-400" data-parent="" alt="">
             </div>
@@ -63,17 +63,18 @@ get_header();
 
 
 <section class="section-video-full">
-    <video src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" autoplay muted loop class="parallax-item" data-gravity="50" data-parent="section-video-full"></video>
+    <video src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" autoplay muted controls="true" loop class="parallax-item" data-gravity="50" data-parent="section-video-full"></video>
+    <img src="https://images.pexels.com/photos/1122868/pexels-photo-1122868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-background-mobile parallax-item" data-gravity="50" data-parent="section-video-full" alt="">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-6">
                 <p class="uppercase small light">
                     Casanova <br/>
                     & Kuoch
                 </p>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-6">
                 <p class="uppercase small light">
                     Member Creative pair.
                 </p>
@@ -184,11 +185,11 @@ get_header();
 <section class="latest-work">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-6">
                 <p class="no-margin">Latest <span class="sans-serif italic">work</span></p>
             </div>
 
-            <div class="col-sm-6 text-right">
+            <div class="col-sm-6 col-6 text-right">
                 <ul class="nav-date no-margin">
                     <li class="is-active">
                         <a href="" class="serif">
@@ -223,7 +224,7 @@ get_header();
                             <div class="col-sm-5">
                                 <img src="https://images.pexels.com/photos/775199/pexels-photo-775199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-shadow" alt="">
                             </div>
-                            <div class="col-sm-5 offset-1">
+                            <div class="col-sm-5 offset-md-1">
                                 <div class="content-project">
                                     <button class="button-round white">
                                         <div class="round"></div>
@@ -261,7 +262,7 @@ get_header();
                             <div class="col-sm-5">
                                 <img src="https://images.pexels.com/photos/1122868/pexels-photo-1122868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-shadow" alt="">
                             </div>
-                            <div class="col-sm-5 offset-1">
+                            <div class="col-sm-5 offset-md-1">
                                 <div class="content-project">
                                     <button class="button-round white">
                                         <div class="round"></div>

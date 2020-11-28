@@ -24,17 +24,17 @@
     <div class="pointer" id="pointer"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-6">
                 <a href="<?php echo get_site_url(); ?>" class="header-logo">
                     <?php lsd_get_template_part('icons','header', 'logo'); ?>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 d-none d-md-block">
                 <h1 class="sans-serif uppercase small intro">
                     independent art director<br>& digital designer
                 </h1>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 d-none d-md-block">
                 <div class="container-checkbox select-theme">
                     <p>
                         <input type="checkbox" id="theme" />
@@ -42,7 +42,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-2 text-right">
+            <div class="col-sm-2 col-6 text-right">
                 <button class="navigation">
                     <div class="bar"></div>
                     <div class="bar"></div>

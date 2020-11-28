@@ -49,7 +49,7 @@ get_header();
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    <div class="col-sm-5  offset-1">
+                    <div class="col-sm-5  offset-sm-1">
                         <ul>
                             <li>
                                 <a href="" class="sans-serif uppercase small">
@@ -141,20 +141,20 @@ get_header();
         </div>
 
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-4">
                 <p class="uppercase small light">
                     Casanova <br/>
                     & Kuoch
                 </p>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-4">
                 <p class="uppercase small light">
                     Creative pair.
                 </p>
             </div>
 
-            <div class="col-sm-3 offset-3">
+            <div class="col-sm-3 offset-sm-3 col-4">
                 <div class="logo-ck-about">
                     <?php lsd_get_template_part('icons','logo', 'ck'); ?>
                 </div>
@@ -162,7 +162,7 @@ get_header();
         </div>
 
         <div class="row align-items-end">
-            <div class="col-sm-4 offset-2">
+            <div class="col-sm-4 offset-sm-2">
                 <a href="" class="uppercase">
                     View Behance
                     <i class="link-externe">
@@ -170,7 +170,7 @@ get_header();
                     </i>
                 </a>
             </div>
-            <div class="col-sm-3 offset-3">
+            <div class="col-sm-3 offset-sm-3">
                 <p class="no-margin">
                     Two creative designer who create original & useful interface for digital brand with love.
                 </p>
@@ -178,7 +178,7 @@ get_header();
         </div>
 
         <div class="row strate-image-about">
-            <div class="col-sm-10 offset-2">
+            <div class="col-sm-10 offset-sm-2">
                 <div class="container-image-parallax image-one-more-thing">
                     <img src="https://images.pexels.com/photos/3906084/pexels-photo-3906084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="50" data-parent="strate-image-about">
                 </div>
@@ -186,7 +186,7 @@ get_header();
         </div>
 
         <div class="row">
-            <div class="col-sm-10 offset-2">
+            <div class="col-sm-10 offset-sm-2">
                 <h2 class="title sans-serif small-medium light">
                     Available for freelance work<br/>
                     <a href="" class="has-border title sans-serif light italic small-medium">Send me an email</a>

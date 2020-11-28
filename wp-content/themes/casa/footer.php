@@ -21,13 +21,13 @@
                 </ul>
             </div>
             <div class="col-sm-6">
-                <p class="sans-serif uppercase small">
+                <p class="sans-serif uppercase small text-footer-1">
                     Available for freelance work<br/>
                     Send me an email
                 </p>
             </div>
             <div class="col-sm-3">
-                <p class="sans-serif">
+                <p class="sans-serif text-footer-2">
                 Independent art director
                 & digital designer specialized in Interaction Design, Mobile application
                 & Brand strategy
