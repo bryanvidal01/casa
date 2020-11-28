@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri();?>/assets/images/icon.png" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/gsap.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/MagicScroll.cjs.js"></script>
 
     <script  src='<?php echo get_template_directory_uri();?>/assets/js/jquery.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.js"></script>
@@ -18,7 +19,9 @@
 
 <body <?php body_class(); ?>>
 
+
 <header>
+    <div class="pointer" id="pointer"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2">
@@ -65,150 +68,157 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="title serif medium italic">
-                                About
-                            </div>
-                            <div class="title sans-serif medium light">
-                                C&K.
-                            </div>
+                            <a href="" class="fade-up fade-1">
+                                <div class="title serif medium italic">
+                                    About
+                                </div>
+                                <div class="title sans-serif medium light">
+                                    C&K.
+                                </div>
+                            </a>
                         </div>
                         <div class="col-sm-7">
-                            <div class="title serif medium italic">
-                                Cases
-                            </div>
-                            <div class="title sans-serif medium light">
-                                Studies.
+                            <div class="fade-up fade-2">
+                                <a href="">
+                                    <div class="title serif medium italic">
+                                        Cases
+                                    </div>
+                                    <div class="title sans-serif medium light">
+                                        Studies.
+                                    </div>
+                                </a>
+
+                                <ul class="row navigation-cases">
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Crédit Agricole Indosuez
+                                            <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Brown university
+                                            <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Dior Academy
+                                            <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Faurecia
+                                            <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Pernod Ricard Club
+                                            <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Safran
+                                            <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Apetiz
+                                            <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Crédit Agricole Indosuez
+                                            <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Brown university
+                                            <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Dior Academy
+                                            <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Faurecia
+                                            <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Pernod Ricard Club
+                                            <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Safran
+                                            <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Apetiz
+                                            <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Crédit Agricole Indosuez
+                                            <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Brown university
+                                            <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Dior Academy
+                                            <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Faurecia
+                                            <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Pernod Ricard Club
+                                            <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Safran
+                                            <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="col-sm-4">
+                                        <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
+                                            Apetiz
+                                            <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                                        </a>
+                                    </li>
+
+                                </ul>
                             </div>
 
-                            <ul class="row navigation-cases">
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Crédit Agricole Indosuez
-                                        <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Brown university
-                                        <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Dior Academy
-                                        <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Faurecia
-                                        <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Pernod Ricard Club
-                                        <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Safran
-                                        <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Apetiz
-                                        <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Crédit Agricole Indosuez
-                                        <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Brown university
-                                        <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Dior Academy
-                                        <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Faurecia
-                                        <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Pernod Ricard Club
-                                        <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Safran
-                                        <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Apetiz
-                                        <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Crédit Agricole Indosuez
-                                        <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Brown university
-                                        <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Dior Academy
-                                        <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Faurecia
-                                        <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Pernod Ricard Club
-                                        <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Safran
-                                        <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-                                <li class="col-sm-4">
-                                    <a href="http://casa.preprod.orizon.paris/project/" class="sans-serif uppercase small white image-follow">
-                                        Apetiz
-                                        <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                                    </a>
-                                </li>
-
-                            </ul>
                         </div>
                     </div>
                 </div>

@@ -9,15 +9,15 @@ get_header();
 <section class="intro-page about">
     <h2 class="title italic serif big">
         Ginger
-        <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1" alt="">
+        <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1 parallax-item" data-gravity="450" alt="">
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
         Art director
     </h2>
-    <h2 class="title serif big light italic text-center">
-        <img src="https://images.pexels.com/photos/5828718/pexels-photo-5828718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2" alt="">
+    <h2 class="title serif big light italic text-center end">
+        <img src="https://images.pexels.com/photos/5828718/pexels-photo-5828718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2 parallax-item" data-gravity="150" alt="">
         for life
-        <img src="https://images.pexels.com/photos/5821470/pexels-photo-5821470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-3" alt="">
+        <img src="https://images.pexels.com/photos/5821470/pexels-photo-5821470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-3 parallax-item" data-gravity="100" alt="">
     </h2>
 </section>
 
@@ -54,16 +54,25 @@ get_header();
                             <li>
                                 <a href="" class="sans-serif uppercase small">
                                     Curriculum vitae
+                                    <i class="link-externe">
+                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
+                                    </i>
                                 </a>
                             </li>
                             <li>
                                 <a href="" class="sans-serif uppercase small">
                                     Book 2020
+                                    <i class="link-externe">
+                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
+                                    </i>
                                 </a>
                             </li>
                             <li>
                                 <a href="" class="sans-serif uppercase small">
                                     Mobile 2020
+                                    <i class="link-externe">
+                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
+                                    </i>
                                 </a>
                             </li>
                         </ul>
@@ -154,7 +163,12 @@ get_header();
 
         <div class="row align-items-end">
             <div class="col-sm-4 offset-2">
-                <a href="" class="uppercase">View Behance</a>
+                <a href="" class="uppercase">
+                    View Behance
+                    <i class="link-externe">
+                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
+                    </i>
+                </a>
             </div>
             <div class="col-sm-3 offset-3">
                 <p class="no-margin">
@@ -163,9 +177,11 @@ get_header();
             </div>
         </div>
 
-        <div class="row">
+        <div class="row strate-image-about">
             <div class="col-sm-10 offset-2">
-                <img src="https://images.pexels.com/photos/3906084/pexels-photo-3906084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-one-more-thing" alt="">
+                <div class="container-image-parallax image-one-more-thing">
+                    <img src="https://images.pexels.com/photos/3906084/pexels-photo-3906084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="50" data-parent="strate-image-about">
+                </div>
             </div>
         </div>
 

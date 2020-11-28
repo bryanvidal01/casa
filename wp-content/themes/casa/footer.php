@@ -69,6 +69,8 @@
     <div class="masque" id="masque"></div>
 </div>
 
+
+
         <?php wp_footer(); ?>
 
     </body>

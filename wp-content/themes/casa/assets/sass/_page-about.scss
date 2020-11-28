@@ -95,10 +95,22 @@ section.one-more-thing{
     margin-top: 40px;
     max-width: 100%;
     margin-bottom: 90px;
+
+    img{
+      margin-top: -20%;
+    }
   }
 
   .small-medium{
     font-size: 5vw;
     line-height: 5.5vw;
+  }
+
+  .link-externe{
+    top: -3px;
+
+    svg{
+      width: 15px;
+    }
   }
 }

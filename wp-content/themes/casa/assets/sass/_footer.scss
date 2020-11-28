@@ -1,5 +1,6 @@
 footer{
   padding: 45px;
+
   .nav-footer{
     a{
       color: $black;
@@ -45,11 +46,23 @@ footer{
     color: $beige;
     margin-top: 130px;
     padding-top: 200px;
+    overflow: hidden;
+
+    .image-footer{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 130%;
+      margin-top: -50%;
+      object-fit: cover;
+    }
+
     &:before{
       content: '';
       position: absolute;
       left: 0;
       top: 0;
+      z-index: 1;
       width: 100%;
       height: 100%;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.5) 83%, rgba(0, 0, 0, 0.5));
@@ -64,6 +77,13 @@ footer{
       padding-bottom: 140px;
       border-bottom: 2px solid $beige;
       margin-bottom: 100px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .container-footer-bottom{
+      position: relative;
+      z-index: 3;
     }
 
     svg{

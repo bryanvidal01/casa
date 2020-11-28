@@ -11,6 +11,9 @@
     }
   }
 
+  .header .intro{
+    color: $beige !important;
+  }
 
 
   [type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before{

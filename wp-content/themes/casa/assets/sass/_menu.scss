@@ -1,13 +1,30 @@
+.pointer{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background: #fff;
+  z-index: 9000;
+  position: fixed;
+  opacity: 0 !important;
+  transform:translate(-50%, -50%);
+  transition: .3s opacity;
+}
 .navigation-container{
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   left: 0;
   top: 0;
+  display: block;
   background: #1c1c1c;
-  display: none;
+  visibility: hidden;
   padding: 50px 60px;
   color: $beige;
+  transition: opacity .4s;
+  opacity: 0;
+
 
   .text-location{
     span{
@@ -65,12 +82,45 @@
       }
     }
   }
+
+  .fade-up{
+    opacity: 0;
+    display: block;
+    transform: translateY(90px);
+    transition: .6s;
+  }
 }
 
 .navigation-open{
   overflow: hidden;
+
+  .pointer{
+    opacity: 1 !important;
+  }
+
   .navigation-container{
     display: block;
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .fade-up{
+    opacity: 1;
+    transform: translateY(0px);
+
+    &.fade-1{
+      transition-delay: .3s;
+    }
+
+    &.fade-2{
+      transition-delay: .4s;
+    }
+  }
+
+  header{
+    position: fixed;
+    z-index: 300;
   }
 
   header{
@@ -105,5 +155,59 @@
         fill: $beige;
       }
     }
+  }
+}
+
+
+.navigation-close{
+
+  .pointer{
+    opacity: 0 !important;
+  }
+
+  button.navigation{
+    color: #000;
+    transition-delay: .4s;
+    &:before{
+      color: #000;
+      transition-delay: .4s;
+    }
+
+    .bar{
+      background: #000;
+      transition-delay: .4s;
+    }
+  }
+
+  .fade-up{
+    opacity: 0;
+    display: block;
+    transform: translateY(90px);
+    transition: .6s;
+
+    &.fade-1{
+      transition-delay: 0s;
+    }
+
+    &.fade-2{
+      transition-delay: .1s;
+    }
+  }
+
+  .navigation-container{
+    opacity: 0;
+    transition-delay: .45s;
+  }
+
+  .header-logo svg g{
+    fill: #171717;
+    transition: .5s;
+    transition-delay: .6s;
+  }
+
+  header .intro{
+    color: #000;
+    transition: .5s;
+    transition-delay: .6s;
   }
 }

@@ -7,7 +7,7 @@ get_header();
 ?>
 
 
-<section class="intro-page">
+<section class="intro-page home">
     <h2 class="title italic serif big parallax-item" data-gravity="-100" data-parent="">
         <div class="masque" data-delay="400">
             <div class="masque-hide has-padding">

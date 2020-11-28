@@ -1,4 +1,5 @@
-<footer class="single" style="background-image: url('https://images.pexels.com/photos/919606/pexels-photo-919606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); ">
+<footer class="single single-footer">
+    <img src="https://images.pexels.com/photos/5674976/pexels-photo-5674976.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="image-footer parallax-item" data-gravity="50" data-parent="single-footer">
     <div class="paginate">
         <div class="container-fluid">
             <div class="row">
@@ -28,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid container-footer-bottom">
         <div class="row">
             <div class="col-sm-3">
                 <ul class="nav-footer">

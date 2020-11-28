@@ -1,8 +1,25 @@
 section.intro-page{
   padding: 0 60px 80px;
-  padding-top: 235px;
+  padding-top: 300px;
   overflow: hidden;
   position: relative;
+
+  &.home{
+    padding-top: 200px;
+    .title{
+      margin-top: -2vw;
+      line-height: 1;
+    }
+
+    h2{
+      &.last{
+        margin-top: -2vw;
+        .title{
+          line-height: 1.2;
+        }
+      }
+    }
+  }
 
   &:before{
     content: '';
@@ -56,7 +73,7 @@ section.intro-page{
     z-index: 3;
     position: relative;
     line-height: 15vw;
-    margin-top: -4vw;
+    margin-top: -7vw;
   }
 
   .title-parallax{
@@ -64,6 +81,31 @@ section.intro-page{
   }
 
   h2.last{
-    margin-top: -2vw;
+    margin-top: -6vw;
+  }
+
+
+  &.about{
+    padding-top: 11vw;
+    .title{
+      margin-top: 0;
+
+      &.end{
+        margin-top: -3vw;
+      }
+    }
+  }
+
+  &.case{
+    .title{
+      line-height: 13vw;
+      margin-top: 0vw;
+    }
+
+    .has-border{
+      &:after{
+        display: none;
+      }
+    }
   }
 }
