@@ -243,7 +243,7 @@ window.onload = function(){
             yPercent: gravity,
             ease: "none",
             scrollTrigger: {
-                trigger: parent,
+                trigger: el.parents(parent),
                 scrub: true
             },
         });

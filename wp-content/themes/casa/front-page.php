@@ -8,7 +8,7 @@ get_header();
 
 
 <section class="intro-page home">
-    <h2 class="title italic serif big parallax-item" data-gravity="-100" data-parent="">
+    <h2 class="title italic serif big parallax-item" data-gravity="-10" data-parent="">
         <div class="masque" data-delay="400">
             <div class="masque-hide has-padding">
                 Brand
@@ -16,19 +16,19 @@ get_header();
         </div>
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
-        <div class="masque parallax-item d-none d-md-inline-block" data-gravity="-600" data-parent="" data-delay="700">
+        <div class="masque parallax-item d-none d-md-inline-block" data-gravity="-45" data-parent="" data-delay="700">
             <div class="masque-hide">
                 <img src="https://images.pexels.com/photos/5255191/pexels-photo-5255191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1" alt="">
             </div>
         </div>
-        <div class="masque" data-delay="600">
+        <div class="masque" data-delay="60">
             <div class="masque-hide">
                 experience
             </div>
         </div>
         <div class="masque d-none d-md-inline-block" data-delay="400">
             <div class="masque-hide">
-                <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-2 parallax-item" data-gravity="-400" data-parent="" alt="">
+                <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-2 parallax-item" data-gravity="-40" data-parent="" alt="">
             </div>
         </div>
     </h2>
@@ -56,7 +56,7 @@ get_header();
         </span>
     </h2>
     <div class="masque-hide">
-        <img src="https://images.pexels.com/photos/2052217/pexels-photo-2052217.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-3 parallax-item" data-gravity="-500" data-parent="" alt="">
+        <img src="https://images.pexels.com/photos/2052217/pexels-photo-2052217.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-3 parallax-item" data-gravity="-100" data-parent="" alt="">
     </div>
 </section>
 

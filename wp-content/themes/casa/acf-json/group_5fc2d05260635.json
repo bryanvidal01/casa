@@ -133,6 +133,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_5fc68009f3b44",
+            "label": "Outils",
+            "name": "post_work_tools",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fc68016f3b45",
+            "label": "Texte résumé",
+            "name": "post_work_resume",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5fc2d21ad22b8",
             "label": "Lien de la réalisation",
             "name": "post_work_url",
@@ -828,5 +866,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1606604686
+    "modified": 1606844467
 }

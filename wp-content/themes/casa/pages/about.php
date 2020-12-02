@@ -9,15 +9,15 @@ get_header();
 <section class="intro-page about">
     <h2 class="title italic serif big">
         Ginger
-        <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1 parallax-item" data-gravity="450" alt="">
+        <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1 parallax-item" data-gravity="-50" data-parent="intro-page" alt="">
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
         Art director
     </h2>
     <h2 class="title serif big light italic text-center end">
-        <img src="https://images.pexels.com/photos/5828718/pexels-photo-5828718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2 parallax-item" data-gravity="150" alt="">
+        <img src="https://images.pexels.com/photos/5828718/pexels-photo-5828718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2 parallax-item" data-gravity="-30" alt="">
         for life
-        <img src="https://images.pexels.com/photos/5821470/pexels-photo-5821470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-3 parallax-item" data-gravity="100" alt="">
+        <img src="https://images.pexels.com/photos/5821470/pexels-photo-5821470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-3 parallax-item" data-gravity="-50" alt="">
     </h2>
 </section>
 

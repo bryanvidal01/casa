@@ -12402,6 +12402,14 @@ a.text-dark:focus, a.text-dark:hover {
   border-color: #FFF;
 }
 /* line 57, ../sass/_components.scss */
+.button-round .text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+/* line 66, ../sass/_components.scss */
 .button-round .round {
   position: absolute;
   width: 100%;
@@ -12413,12 +12421,12 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   transition: .2s;
 }
-/* line 68, ../sass/_components.scss */
+/* line 77, ../sass/_components.scss */
 .button-round .round.is-hover {
   transition: 0s;
 }
 
-/* line 75, ../sass/_components.scss */
+/* line 84, ../sass/_components.scss */
 button.navigation {
   width: 70px;
   height: 70px;
@@ -12429,7 +12437,7 @@ button.navigation {
   display: inline-block;
   margin-top: -4px;
 }
-/* line 85, ../sass/_components.scss */
+/* line 94, ../sass/_components.scss */
 button.navigation:before {
   content: 'Menu';
   font-family: "oakes_groteskregular";
@@ -12439,7 +12447,7 @@ button.navigation:before {
   transform: translateY(-50%);
   right: calc(100% + 20px);
 }
-/* line 95, ../sass/_components.scss */
+/* line 104, ../sass/_components.scss */
 button.navigation .bar {
   width: 11px;
   height: 1px;
@@ -12449,29 +12457,29 @@ button.navigation .bar {
   left: 50%;
   transform: translateX(-50%);
 }
-/* line 104, ../sass/_components.scss */
+/* line 113, ../sass/_components.scss */
 button.navigation .bar:last-child {
   top: auto;
   bottom: 31px;
 }
 
-/* line 113, ../sass/_components.scss */
+/* line 122, ../sass/_components.scss */
 .masque {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
-/* line 117, ../sass/_components.scss */
+/* line 126, ../sass/_components.scss */
 .masque .masque-hide {
   transform: translateY(100%);
   overflow: hidden;
   transition: .8s;
 }
-/* line 122, ../sass/_components.scss */
+/* line 131, ../sass/_components.scss */
 .masque .masque-hide.has-padding {
   padding-left: 1vw;
 }
-/* line 128, ../sass/_components.scss */
+/* line 137, ../sass/_components.scss */
 .masque.visible .masque-hide {
   overflow: visible;
   transform: translateY(0%);
@@ -13318,7 +13326,7 @@ section.one-more-thing .link-externe svg {
   font-family: "larkenthin";
 }
 /* line 74, ../sass/_page-case.scss */
-.case-title-text .title-strate i {
+.case-title-text .title-strate em {
   font-family: "larkenthin_italic";
 }
 /* line 77, ../sass/_page-case.scss */

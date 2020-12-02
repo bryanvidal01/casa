@@ -9,8 +9,8 @@ get_header();
     <section class="intro-page case">
         <div class="image-case">
             <div class="container-image">
-                <div class="container-image-parallax parallax-item" data-gravity="300">
-                    <img src="https://images.pexels.com/photos/2618784/pexels-photo-2618784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="parallax-item" data-gravity="400">
+                <div class="container-image-parallax parallax-item" data-gravity="30">
+                    <img src="https://images.pexels.com/photos/2618784/pexels-photo-2618784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="parallax-item" data-gravity="40">
                 </div>
             </div>
             <button class="button-round">
