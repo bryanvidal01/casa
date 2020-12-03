@@ -40,7 +40,7 @@
                 <p class="sans-serif uppercase small align-bottom-absolute">code by <a href="https://orizon.paris">Orizon</a></p>
             </div>
             <div class="col-sm-3">
-                <a href="" class="sans-serif uppercase small align-bottom-absolute">Back to top</a>
+                <a href="" class="sans-serif uppercase small align-bottom-absolute back-to-top">Back to top</a>
             </div>
             <div class="col-sm-6 text-right">
                 <div class="container-year">

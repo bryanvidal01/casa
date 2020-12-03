@@ -199,9 +199,8 @@ window.onload = function(){
         });
 
         new MagicScroll({
-            target: document.querySelector(".scroll-view.afte"),
             speed: 60,
-            smooth: 10
+            smooth: 10,
         });
 
 

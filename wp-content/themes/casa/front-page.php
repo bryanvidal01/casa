@@ -4,6 +4,37 @@ Template Name: Homepage
 */
 
 get_header();
+
+
+$page_home_intro_images = get_field('page_home_intro_images');
+
+
+
+if($page_home_intro_images[0]['page_home_intro_images_image']){
+    $page_home_intro_images_1_url = lsd_get_thumb($page_home_intro_images[0]['page_home_intro_images_image'], 'large');
+}
+
+if($page_home_intro_images[1]['page_home_intro_images_image']){
+    $page_home_intro_images_2_url = lsd_get_thumb($page_home_intro_images[1]['page_home_intro_images_image'], 'large');
+}
+
+if($page_home_intro_images[2]['page_home_intro_images_image']){
+    $page_home_intro_images_3_url = lsd_get_thumb($page_home_intro_images[2]['page_home_intro_images_image'], 'large');
+}
+
+$page_home_showreel_text = get_field('page_home_showreel_text');
+$page_home_showreel_video = get_field('page_home_showreel_video');
+$page_home_showreel_image = get_field('page_home_showreel_image');
+
+if($page_home_showreel_image){
+    $page_home_showreel_image_url = lsd_get_thumb($page_home_showreel_image, 'full');
+}
+$page_home_showreel_url = get_field('page_home_showreel_url');
+
+$page_home_about_text = get_field('page_home_about_text');
+$page_home_about_skills = get_field('page_home_about_skills');
+
+$page_home_works_articles = get_field('page_home_works_articles');
 ?>
 
 
@@ -17,9 +48,11 @@ get_header();
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
         <div class="masque parallax-item d-none d-md-inline-block" data-gravity="-45" data-parent="" data-delay="700">
+            <?php if(isset($page_home_intro_images_1_url) && $page_home_intro_images_1_url): ?>
             <div class="masque-hide">
-                <img src="https://images.pexels.com/photos/5255191/pexels-photo-5255191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1" alt="">
+                <img src="<?= $page_home_intro_images_1_url; ?>" class="img-1" alt="">
             </div>
+            <?php endif; ?>
         </div>
         <div class="masque" data-delay="60">
             <div class="masque-hide">
@@ -27,9 +60,11 @@ get_header();
             </div>
         </div>
         <div class="masque d-none d-md-inline-block" data-delay="400">
+            <?php if(isset($page_home_intro_images_2_url) && $page_home_intro_images_2_url): ?>
             <div class="masque-hide">
-                <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-2 parallax-item" data-gravity="-40" data-parent="" alt="">
+                <img src="<?= $page_home_intro_images_2_url; ?>" class="img-2 parallax-item" data-gravity="-40" data-parent="" alt="">
             </div>
+            <?php endif; ?>
         </div>
     </h2>
     <h2 class="last">
@@ -55,16 +90,23 @@ get_header();
             </div>
         </span>
     </h2>
+
+    <?php if(isset($page_home_intro_images_3_url) && $page_home_intro_images_3_url): ?>
     <div class="masque-hide">
-        <img src="https://images.pexels.com/photos/2052217/pexels-photo-2052217.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-3 parallax-item" data-gravity="-100" data-parent="" alt="">
+        <img src="<?= $page_home_intro_images_3_url; ?>" class="img-3 parallax-item" data-gravity="-100" data-parent="" alt="">
     </div>
+    <?php endif; ?>
 </section>
 
 
 
 <section class="section-video-full">
-    <video src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" autoplay muted controls="true" loop class="parallax-item" data-gravity="50" data-parent="section-video-full"></video>
-    <img src="https://images.pexels.com/photos/1122868/pexels-photo-1122868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-background-mobile parallax-item" data-gravity="50" data-parent="section-video-full" alt="">
+    <?php if($page_home_showreel_video): ?>
+        <video src="<?= $page_home_showreel_video; ?>" autoplay muted controls="true" loop class="parallax-item" data-gravity="50" data-parent="section-video-full"></video>
+    <?php endif; ?>
+    <?php if(isset($page_home_showreel_image_url) && $page_home_showreel_image_url): ?>
+        <img src="<?= $page_home_showreel_image_url; ?>" class="image-background-mobile parallax-item" data-gravity="50" data-parent="section-video-full" alt="">
+    <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3 col-6">
@@ -81,20 +123,22 @@ get_header();
             </div>
 
             <div class="col-sm-3 text-right">
-                <p class="light last-text">
-                    Two creative designer who create original & useful interface for digital brand with love.
-                </p>
+                <div class="light last-text">
+                    <?= $page_home_showreel_text; ?>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-12 text-center">
-                <button class="button-round white">
+                <?php if($page_home_showreel_url): ?>
+                <a href="<?= $page_home_showreel_url; ?>" target="_blank" class="button-round white">
                     <div class="round"></div>
                     <div class="text uppercase sans-serif light">
                         Showreel
                     </div>
-                </button>
+                </a>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -113,54 +157,34 @@ get_header();
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
+
+                <?php if($page_home_about_skills): ?>
                 <p class="sans-serif small">
                     Skills
                 </p>
 
                 <ul class="list-skills">
+
+                    <?php foreach ($page_home_about_skills as $page_home_about_skill):
+                        $page_home_about_skill_label = $page_home_about_skill['page_home_about_skills_skill_label'];
+                        $page_home_about_skill_image_ID = $page_home_about_skill['page_home_about_skills_skill_image'];
+
+                        if($page_home_about_skill_image_ID){
+                            $page_home_about_skill_image_url = lsd_get_thumb($page_home_about_skill_image_ID, 'large');
+                        }
+                    ?>
                     <li>
                         <div class="image-follow">
-                            <div class="sans-serif uppercase small">Product design</div>
-                            <img src="https://images.pexels.com/photos/5496586/pexels-photo-5496586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
+                            <div class="sans-serif uppercase small"><?= $page_home_about_skill_label; ?></div>
+
+                            <?php if(isset($page_home_about_skill_image_url) && $page_home_about_skill_image_url): ?>
+                            <img src="<?= $page_home_about_skill_image_url; ?>" width="250" class="follow-image" alt="">
+                            <?php endif; ?>
                         </div>
                     </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">Digital art direction</div>
-                            <img src="https://images.pexels.com/photos/5588662/pexels-photo-5588662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">Interaction</div>
-                            <img src="https://images.pexels.com/photos/4463762/pexels-photo-4463762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">Mobile App</div>
-                            <img src="https://images.pexels.com/photos/4993100/pexels-photo-4993100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">Brand strategy</div>
-                            <img src="https://images.pexels.com/photos/5087541/pexels-photo-5087541.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">Mobile App</div>
-                            <img src="https://images.pexels.com/photos/5393816/pexels-photo-5393816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image-follow">
-                            <div class="sans-serif uppercase small">User experience</div>
-                            <img src="https://images.pexels.com/photos/4862663/pexels-photo-4862663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" class="follow-image" alt="">
-                        </div>
-                    </li>
+                    <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
             </div>
 
             <div class="col-sm-8 text-right">
@@ -168,15 +192,15 @@ get_header();
                     About
                 </a>
 
+                <?php if($page_home_about_text): ?>
                 <div class="container-text">
                     <div class="text-about">
-                        <p class="sans-serif">
-                            Independent art director<br/>
-                            & digital designer specialized in Interaction Design, Mobile application<br/>
-                            and Brand strategy
-                        </p>
+                        <div class="sans-serif">
+                            <?= $page_home_about_text; ?>
+                        </div>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -205,86 +229,76 @@ get_header();
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="push-project push-project-1">
-                    <img src="https://images.pexels.com/photos/1008739/pexels-photo-1008739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="background-project parallax-item" data-gravity="50" data-parent="push-project-1" alt="">
-                    <div class="content-project-info">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="title italic serif big color-beige">Crédit</h2>
-                                <h2 class="title sans-serif big light text-center color-beige">
-                                    Agricole
-                                </h2>
-                                <h2 class="title italic serif big color-beige">INDOSUEZ</h2>
-                            </div>
-                        </div>
+        <?php if($page_home_works_articles): ?>
+            <div class="row">
+                <div class="col-sm-12">
+                    <?php
+                    foreach ($page_home_works_articles as $page_home_works_article):
+                        $post_work_name_1 = get_field('post_work_name_1', $page_home_works_article);
+                        $post_work_name_2 = get_field('post_work_name_2', $page_home_works_article);
+                        $post_work_name_3 = get_field('post_work_name_3', $page_home_works_article);
 
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <img src="https://images.pexels.com/photos/775199/pexels-photo-775199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-shadow" alt="">
-                            </div>
-                            <div class="col-sm-5 offset-md-1">
-                                <div class="content-project">
-                                    <button class="button-round white">
-                                        <div class="round"></div>
-                                        <div class="text uppercase sans-serif light">
-                                            View Case
-                                        </div>
-                                    </button>
+                        $post_work_name_agency = get_field('post_work_name_agency', $page_home_works_article);
+                        $post_work_year = get_field('post_work_year', $page_home_works_article);
+                        $post_work_resume = get_field('post_work_resume', $page_home_works_article);
 
-                                    <div class="info-project">
-                                        <span class="date sans-serif">2020</span>
-                                        <span class="lieu sans-serif">Agency : Adyax</span>
-                                        <div class="description sans-serif">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        $post_work_thumbnail = get_field('post_work_thumbnail', $page_home_works_article);
+
+                        if($post_work_thumbnail){
+                            $post_work_thumbnail_url = lsd_get_thumb($post_work_thumbnail, 'full');
+                        }
+                        $post_work_background = get_field('post_work_background', $page_home_works_article);
+                        if($post_work_background){
+                            $post_work_background_url = lsd_get_thumb($post_work_background, 'full');
+                        }
+
+
+                        $post_work_link_url = get_the_permalink($page_home_works_article);
+
+                    ?>
+                    <div class="push-project push-project-1">
+                        <img src="<?= $post_work_background_url; ?>" class="background-project parallax-item" data-gravity="50" data-parent="push-project-1" alt="">
+                        <div class="content-project-info">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h2 class="title italic serif big color-beige"><?= $post_work_name_1; ?></h2>
+                                    <h2 class="title sans-serif big light text-center color-beige">
+                                        <?= $post_work_name_2; ?>
+                                    </h2>
+                                    <h2 class="title italic serif big color-beige"><?= $post_work_name_3; ?></h2>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <img src="<?= $post_work_thumbnail_url; ?>" class="image-shadow" alt="">
+                                </div>
+                                <div class="col-sm-5 offset-md-1">
+                                    <div class="content-project">
+                                        <a href="<?= $post_work_link_url; ?>" class="button-round white">
+                                            <div class="round"></div>
+                                            <div class="text uppercase sans-serif light">
+                                                View Case
+                                            </div>
+                                        </a>
+
+                                        <div class="info-project">
+                                            <span class="date sans-serif"><?= $post_work_year; ?></span>
+                                            <span class="lieu sans-serif">Agency : <?= $post_work_name_agency; ?></span>
+                                            <div class="description sans-serif">
+                                                <?= $post_work_resume ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="push-project push-project-2">
-                    <img src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="background-project parallax-item" data-gravity="50" data-parent="push-project-2" alt="">
-
-                    <div class="content-project-info">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="title italic serif big color-beige">Brown</h2>
-                                <h2 class="title sans-serif big light text-center color-beige">
-                                    University
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <img src="https://images.pexels.com/photos/1122868/pexels-photo-1122868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-shadow" alt="">
-                            </div>
-                            <div class="col-sm-5 offset-md-1">
-                                <div class="content-project">
-                                    <button class="button-round white">
-                                        <div class="round"></div>
-                                        <div class="text uppercase sans-serif light">
-                                            View Case
-                                        </div>
-                                    </button>
-
-                                    <div class="info-project">
-                                        <span class="date sans-serif">2020</span>
-                                        <span class="lieu sans-serif">Agency : Adyax</span>
-                                        <div class="description sans-serif">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
+
 
         <div class="row">
             <div class="col-sm-12 text-center">

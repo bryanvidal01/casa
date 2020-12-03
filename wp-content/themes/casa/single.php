@@ -173,7 +173,7 @@ endif;
                                     </p>
                                 </div>
                                 <?php endif; ?>
-                                
+
                             </div>
                         </div>
                         <?php if($post_work_url): ?>
@@ -193,4 +193,9 @@ endif;
     </section>
 
 <?php
-get_footer('single');
+
+if(get_previous_post()){
+    get_footer('single');
+}else{
+    get_footer();
+}

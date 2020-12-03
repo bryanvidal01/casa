@@ -4,20 +4,57 @@ Template Name: About
 */
 
 get_header();
+
+
+$page_about_intro_images = get_field('page_about_intro_images');
+
+
+
+if($page_about_intro_images[0]['page_about_intro_images_image']){
+    $page_about_intro_images_1_url = lsd_get_thumb($page_about_intro_images[0]['page_about_intro_images_image'], 'large');
+}
+
+if($page_about_intro_images[1]['page_about_intro_images_image']){
+    $page_about_intro_images_2_url = lsd_get_thumb($page_about_intro_images[1]['page_about_intro_images_image'], 'large');
+}
+
+if($page_about_intro_images[2]['page_about_intro_images_image']){
+    $page_about_intro_images_3_url = lsd_get_thumb($page_about_intro_images[2]['page_about_intro_images_image'], 'large');
+}
+
+$page_about_about_text = get_field('page_about_about_text');
+$page_about_about_files = get_field('page_about_about_files');
+
+$page_about_agencies = get_field('page_about_agencies');
+
+$page_about_more_text = get_field('page_about_more_text');
+$page_about_more_image = get_field('page_about_more_image');
+
+if($page_about_more_image){
+    $page_about_more_image_url = lsd_get_thumb($page_about_more_image, 'full');
+}
+
 ?>
 
 <section class="intro-page about">
     <h2 class="title italic serif big">
         Ginger
-        <img src="https://images.pexels.com/photos/5277082/pexels-photo-5277082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-1 parallax-item" data-gravity="-50" data-parent="intro-page" alt="">
+
+        <?php if(isset($page_about_intro_images_1_url) && $page_about_intro_images_1_url): ?>
+        <img src="<?= $page_about_intro_images_1_url; ?>" class="img-1 parallax-item" data-gravity="-50" data-parent="intro-page" alt="">
+        <?php endif; ?>
     </h2>
     <h2 class="title sans-serif big light text-center world-2">
         Art director
     </h2>
     <h2 class="title serif big light italic text-center end">
-        <img src="https://images.pexels.com/photos/5828718/pexels-photo-5828718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-2 parallax-item" data-gravity="-30" alt="">
+        <?php if(isset($page_about_intro_images_2_url) && $page_about_intro_images_2_url): ?>
+        <img src="<?= $page_about_intro_images_2_url ?>" class="img-2 parallax-item" data-gravity="-30" alt="">
+        <?php endif; ?>
         for life
-        <img src="https://images.pexels.com/photos/5821470/pexels-photo-5821470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-3 parallax-item" data-gravity="-50" alt="">
+        <?php if(isset($page_about_intro_images_3_url) && $page_about_intro_images_3_url): ?>
+        <img src="<?= $page_about_intro_images_3_url; ?>" class="img-3 parallax-item" data-gravity="-50" alt="">
+        <?php endif; ?>
     </h2>
 </section>
 
@@ -45,38 +82,32 @@ get_header();
 
                 <div class="row info-about-me">
                     <div class="col-sm-6">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <?= $page_about_about_text; ?>
                     </div>
+
+                    <?php if($page_about_about_files): ?>
                     <div class="col-sm-5  offset-sm-1">
                         <ul>
-                            <li>
-                                <a href="" class="sans-serif uppercase small">
-                                    Curriculum vitae
-                                    <i class="link-externe">
-                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="sans-serif uppercase small">
-                                    Book 2020
-                                    <i class="link-externe">
-                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="sans-serif uppercase small">
-                                    Mobile 2020
-                                    <i class="link-externe">
-                                        <?= lsd_get_template_part('icons', 'external', 'link'); ?>
-                                    </i>
-                                </a>
-                            </li>
+                            <?php foreach ($page_about_about_files as $page_about_about_file):
+                                $page_about_about_file_label = $page_about_about_file['page_about_about_files_file_name'];
+                                $page_about_about_file_document = $page_about_about_file['page_about_about_files_file_document'];
+
+                                if($page_about_about_file_label && $page_about_about_file_document):
+                            ?>
+
+                                <li>
+                                    <a href="<?= $page_about_about_file_document; ?>" target="_blank" class="sans-serif uppercase small">
+                                        <?= $page_about_about_file_label; ?>
+                                        <i class="link-externe">
+                                            <?= lsd_get_template_part('icons', 'external', 'link'); ?>
+                                        </i>
+                                    </a>
+                                </li>
+
+                            <?php endif; endforeach; ?>
                         </ul>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -98,33 +129,24 @@ get_header();
                 <h2 class="title sans-serif medium">
                     with me
                 </h2>
-
+                <?php if($page_about_agencies): ?>
                 <div class="row info-about-me">
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
-                    <div class="col-sm-5">
-                        <img src="http://fakeimg.pl/400x200/" class="logo-work-with-me" alt="">
-                    </div>
+
+                    <?php foreach ($page_about_agencies as $page_about_agency):
+                        $page_about_agencies_agency_logo_image = $page_about_agency['page_about_agencies_agency_logo'];
+
+                        if($page_about_agencies_agency_logo_image){
+                            $page_about_agencies_agency_logo_image_url = lsd_get_thumb($page_about_agencies_agency_logo_image, 'full');
+                        }
+
+                        if(isset($page_about_agencies_agency_logo_image_url)):
+                    ?>
+                        <div class="col-sm-5">
+                            <img src="<?= $page_about_agencies_agency_logo_image_url; ?>" class="logo-work-with-me" alt="">
+                        </div>
+                    <?php endif; endforeach; ?>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -171,19 +193,18 @@ get_header();
                 </a>
             </div>
             <div class="col-sm-3 offset-sm-3">
-                <p class="no-margin">
-                    Two creative designer who create original & useful interface for digital brand with love.
-                </p>
+                <?= $page_about_more_text; ?>
             </div>
         </div>
-
+        <?php if(isset($page_about_more_image_url) && $page_about_more_image_url): ?>
         <div class="row strate-image-about">
             <div class="col-sm-10 offset-sm-2">
                 <div class="container-image-parallax image-one-more-thing">
-                    <img src="https://images.pexels.com/photos/3906084/pexels-photo-3906084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="parallax-item" data-gravity="50" data-parent="strate-image-about">
+                    <img src="<?=$page_about_more_image_url; ?>" class="parallax-item" data-gravity="50" data-parent="strate-image-about">
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
         <div class="row">
             <div class="col-sm-10 offset-sm-2">

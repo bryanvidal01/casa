@@ -1,5 +1,19 @@
+<?php
+    $prev_post = get_previous_post();
+    $prev_post_ID = $prev_post->ID;
+    $post_work_background = get_field('post_work_background', $prev_post_ID);
+
+    if($post_work_background){
+        $post_work_background_url = lsd_get_thumb($post_work_background, 'full');
+    }
+
+    $post_work_name_1 = get_field('post_work_name_1', $prev_post_ID);
+    $post_work_name_2 = get_field('post_work_name_2', $prev_post_ID);
+    $post_work_name_3 = get_field('post_work_name_3', $prev_post_ID);
+?>
+
 <footer class="single single-footer">
-    <img src="https://images.pexels.com/photos/5674976/pexels-photo-5674976.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="image-footer parallax-item" data-gravity="50" data-parent="single-footer">
+    <img src="<?= $post_work_background_url; ?>" alt="" class="image-footer parallax-item" data-gravity="50" data-parent="single-footer">
     <div class="paginate">
         <div class="container-fluid">
             <div class="row">
@@ -10,21 +24,21 @@
                 </div>
                 <div class="col-8 text-right">
                     <h3 class="title medium serif italic">
-                        Inspired
+                        <?= $post_work_name_1 ?>
                     </h3>
                     <h3 class="title medium sans-serif light">
-                        in Iceland
+                        <?= $post_work_name_2 . ' ' . $post_work_name_3; ?>
                     </h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-10 text-center">
-                    <button class="button-round white">
+                    <a href="<?= get_the_permalink($prev_post_ID); ?>" class="button-round white">
                         <div class="round"></div>
                         <div class="text uppercase sans-serif light">
                             View Case
                         </div>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -70,7 +84,7 @@
                 <p class="sans-serif uppercase small align-bottom-absolute">code by <a href="https://orizon.paris">Orizon</a></p>
             </div>
             <div class="col-sm-3">
-                <a href="" class="sans-serif uppercase small align-bottom-absolute">Back to top</a>
+                <a href="" class="sans-serif uppercase small align-bottom-absolute back-to-top">Back to top</a>
             </div>
             <div class="col-sm-6 text-right">
                 <div class="container-year">
