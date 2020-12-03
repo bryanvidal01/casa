@@ -7,7 +7,7 @@ function wp_custom_post_type() {
                 'singular_name' => __('Réalisation', 'lsd_lang'),
             ),
             'public'      => true,
-            'has_archive' => false,
+            'has_archive' => true,
             'publicly_queryable'  => 'false'
         )
     );

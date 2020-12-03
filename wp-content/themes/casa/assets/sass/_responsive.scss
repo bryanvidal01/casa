@@ -222,11 +222,17 @@
   .case-two-image-not-aligned,
   .case-image-full-container,
   .three-cols-images,
-  .case-resume{
+  .case-resume,
+  .list-case{
     padding: 0 0;
     margin-bottom: 60px;
   }
 
+  .intro-page.case.archive-case{
+    .image-case{
+      margin-bottom: 30px;
+    }
+  }
   .case-title-text{
     .text-content{
       max-width: 100%;

@@ -47,6 +47,12 @@
       }
     }
   }
+
+  &.archive-case{
+    .image-case .container-image{
+      height: auto;
+    }
+  }
 }
 
 
@@ -99,6 +105,63 @@
   .slick-slide img{
     max-width: 100%;
     padding: 0 15px;
+  }
+
+
+  .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    width: 83px;
+    height: 83px;
+    background: #FFF;
+    border-radius: 50%;
+
+    &:before{
+      display: none;
+    }
+
+    &:hover, &:focus{
+      background: #FFF !important;
+    }
+
+    &:after{
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: url('../images/arrow.svg');
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: .3s;
+    }
+
+    &.slick-prev{
+      left: 60px;
+      &:after{
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+
+      &:hover{
+        &:after{
+          margin-left: -5px;
+        }
+      }
+    }
+    &.slick-next{
+      right: 60px;
+
+      &:hover{
+        &:after{
+          margin-left: 5px;
+        }
+      }
+    }
   }
 
   .slick-slide{
@@ -235,5 +298,40 @@
     .button-round{
       margin-top: -10px;
     }
+  }
+}
+
+.case-video-full-container{
+  padding: 0 60px;
+  margin-bottom: 140px;
+
+  video{
+    width: 100%;
+  }
+}
+
+.list-case{
+  padding: 60px 60px 0;
+
+  .medium{
+    font-size: 5vw;
+  }
+
+  .image-follow{
+    padding: 3vw 0 3vw;
+    border-top: 2px solid #000;
+
+    .follow-image{
+      z-index: 5;
+    }
+  }
+
+  .label{
+    margin-bottom: 20px;
+  }
+
+  .info-project-cases{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
   }
 }

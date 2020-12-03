@@ -304,7 +304,7 @@ $page_home_works_articles = get_field('page_home_works_articles');
             <div class="col-sm-12 text-center">
                 <div class="more-studies">
                     <div class="image-follow">
-                        <a href="" class="title sans-serif italic medium has-border">
+                        <a href="<?php echo get_post_type_archive_link('works'); ?>" class="title sans-serif italic medium has-border">
                             See all case studies
                         </a>
                         <div class="follow-image multiples">

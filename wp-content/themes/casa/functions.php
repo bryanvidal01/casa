@@ -121,3 +121,12 @@ function remove_menu_items() {
 }
 add_action('admin_menu', 'remove_menu_items');
 
+
+
+function set_posts_per_page_for_towns_cpt( $query ) {
+    if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'works' ) ) {
+        $query->set( 'posts_per_page', '-1' );
+    }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page_for_towns_cpt' );
+
